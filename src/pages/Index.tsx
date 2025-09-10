@@ -1,14 +1,25 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 import { Restaurant, Filters } from '@/types/restaurant';
 import { restaurants } from '@/data/restaurants';
 import { SwipeCard } from '@/components/SwipeCard';
 import { FilterBar } from '@/components/FilterBar';
 import { LikedRestaurants } from '@/components/LikedRestaurants';
 import { Button } from '@/components/ui/button';
-import { Heart, RotateCcw } from 'lucide-react';
+import { Heart, RotateCcw, LogOut, User } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Index = () => {
+  const navigate = useNavigate();
+  const { user, loading, signOut } = useAuth();
+
+  // Redirect to auth if not logged in
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate('/auth');
+    }
+  }, [user, loading, navigate]);
   const [currentRestaurants, setCurrentRestaurants] = useState<Restaurant[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedRestaurants, setLikedRestaurants] = useState<Restaurant[]>([]);
@@ -70,6 +81,23 @@ const Index = () => {
   const currentRestaurant = currentRestaurants[currentIndex];
   const hasMoreCards = currentIndex < currentRestaurants.length;
 
+  // Show loading state while checking auth
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto" />
+          <p className="text-muted-foreground">Loading SwipEats...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Don't render if not authenticated
+  if (!user) {
+    return null;
+  }
+
   if (showLiked) {
     return (
       <div className="min-h-screen bg-background p-4">
@@ -87,7 +115,28 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <div className="p-4 pb-2">
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto space-y-4">
+          {/* User Header */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
+                <User className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <div>
+                <h2 className="font-semibold text-card-foreground">Welcome back!</h2>
+                <p className="text-sm text-muted-foreground">{user.email}</p>
+              </div>
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={signOut}
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <LogOut className="w-4 h-4" />
+            </Button>
+          </div>
+          
           <FilterBar filters={filters} onFiltersChange={setFilters} />
         </div>
       </div>
