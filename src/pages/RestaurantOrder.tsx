@@ -1,0 +1,234 @@
+import { ArrowLeft, Star, MapPin, Clock, Plus, Minus } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useNavigate, useParams } from 'react-router-dom';
+import { restaurants } from '@/data/restaurants';
+import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+
+interface MenuItem {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+const RestaurantOrder = () => {
+  const navigate = useNavigate();
+  const { restaurantId } = useParams();
+  const { toast } = useToast();
+  const [cart, setCart] = useState<Record<string, number>>({});
+
+  const restaurant = restaurants.find(r => r.id === restaurantId);
+
+  if (!restaurant) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <h2 className="text-xl font-bold text-card-foreground">Restaurant not found</h2>
+          <Button onClick={() => navigate('/favorites')}>
+            Back to Favorites
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+  // Mock menu items - in a real app, this would come from an API
+  const menuItems: MenuItem[] = [
+    {
+      id: '1',
+      name: 'Signature Special',
+      description: 'Our most popular dish with fresh ingredients',
+      price: 12.99,
+      category: 'Mains'
+    },
+    {
+      id: '2', 
+      name: 'Classic Favorite',
+      description: 'Traditional recipe loved by all',
+      price: 9.99,
+      category: 'Mains'
+    },
+    {
+      id: '3',
+      name: 'Fresh Starter',
+      description: 'Perfect way to begin your meal',
+      price: 6.99,
+      category: 'Appetizers'
+    },
+    {
+      id: '4',
+      name: 'House Beverage',
+      description: 'Refreshing drink to complement your meal',
+      price: 3.99,
+      category: 'Drinks'
+    }
+  ];
+
+  const addToCart = (itemId: string) => {
+    setCart(prev => ({
+      ...prev,
+      [itemId]: (prev[itemId] || 0) + 1
+    }));
+  };
+
+  const removeFromCart = (itemId: string) => {
+    setCart(prev => {
+      const newCart = { ...prev };
+      if (newCart[itemId] > 1) {
+        newCart[itemId]--;
+      } else {
+        delete newCart[itemId];
+      }
+      return newCart;
+    });
+  };
+
+  const getCartTotal = () => {
+    return Object.entries(cart).reduce((total, [itemId, quantity]) => {
+      const item = menuItems.find(i => i.id === itemId);
+      return total + (item?.price || 0) * quantity;
+    }, 0);
+  };
+
+  const getTotalItems = () => {
+    return Object.values(cart).reduce((total, quantity) => total + quantity, 0);
+  };
+
+  const handleCheckout = () => {
+    toast({
+      title: "Order placed!",
+      description: `Your order from ${restaurant.name} has been placed successfully.`,
+    });
+    navigate('/orders');
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <div className="relative">
+        <img 
+          src={restaurant.image}
+          alt={restaurant.name}
+          className="w-full h-64 object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => navigate('/favorites')}
+          className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm"
+        >
+          <ArrowLeft className="w-5 h-5" />
+        </Button>
+
+        <div className="absolute bottom-4 left-4 right-4 text-white">
+          <h1 className="text-2xl font-bold">{restaurant.name}</h1>
+          <p className="text-sm opacity-90">{restaurant.description}</p>
+          
+          <div className="flex items-center space-x-4 mt-2 text-sm">
+            <div className="flex items-center space-x-1">
+              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <span>{restaurant.rating}</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <MapPin className="w-4 h-4" />
+              <span>{restaurant.distance} mi</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <Clock className="w-4 h-4" />
+              <span>{restaurant.estimatedTime} min</span>
+            </div>
+          </div>
+
+          {restaurant.deals && (
+            <div className="mt-2 text-sm font-medium bg-secondary/20 px-3 py-1 rounded-full inline-block">
+              🎯 {restaurant.deals}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Menu */}
+      <div className="p-4 pb-32">
+        <div className="max-w-md mx-auto">
+          <h2 className="text-xl font-bold text-card-foreground mb-6">Menu</h2>
+          
+          <div className="space-y-4">
+            {menuItems.map((item) => (
+              <div key={item.id} className="swipe-card p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-card-foreground">{item.name}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                    <p className="text-lg font-bold text-card-foreground mt-2">
+                      ${item.price.toFixed(2)}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between mt-3">
+                  <span className="text-xs text-muted-foreground uppercase tracking-wide">
+                    {item.category}
+                  </span>
+                  
+                  <div className="flex items-center space-x-2">
+                    {cart[item.id] > 0 && (
+                      <>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => removeFromCart(item.id)}
+                          className="w-8 h-8 p-0"
+                        >
+                          <Minus className="w-4 h-4" />
+                        </Button>
+                        <span className="w-8 text-center text-sm font-medium">
+                          {cart[item.id]}
+                        </span>
+                      </>
+                    )}
+                    <Button
+                      size="sm"
+                      onClick={() => addToCart(item.id)}
+                      className="gradient-primary text-primary-foreground border-0 w-8 h-8 p-0"
+                    >
+                      <Plus className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Cart Footer */}
+      {getTotalItems() > 0 && (
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4">
+          <div className="max-w-md mx-auto">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">
+                {getTotalItems()} item{getTotalItems() !== 1 ? 's' : ''}
+              </span>
+              <span className="text-xl font-bold text-card-foreground">
+                ${getCartTotal().toFixed(2)}
+              </span>
+            </div>
+            <Button 
+              onClick={handleCheckout}
+              className="w-full gradient-primary text-primary-foreground border-0"
+              size="lg"
+            >
+              Place Order
+            </Button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default RestaurantOrder;

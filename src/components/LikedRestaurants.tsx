@@ -69,7 +69,11 @@ export const LikedRestaurants = ({ likedRestaurants, onClose, showCloseButton = 
                 )}
               </div>
               
-              <Button size="sm" className="gradient-primary text-primary-foreground border-0">
+              <Button 
+                size="sm" 
+                className="gradient-primary text-primary-foreground border-0"
+                onClick={() => window.location.href = `/restaurant/${restaurant.id}`}
+              >
                 Order Now
               </Button>
             </div>
