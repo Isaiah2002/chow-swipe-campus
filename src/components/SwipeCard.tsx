@@ -5,10 +5,12 @@ import { Heart, X, Clock, MapPin, Star } from 'lucide-react';
 interface SwipeCardProps {
   restaurant: Restaurant;
   onSwipe: (direction: 'left' | 'right') => void;
+  onFavorite?: (restaurant: Restaurant) => void;
+  isFavorited?: boolean;
   isActive?: boolean;
 }
 
-export const SwipeCard = ({ restaurant, onSwipe, isActive = true }: SwipeCardProps) => {
+export const SwipeCard = ({ restaurant, onSwipe, onFavorite, isFavorited = false, isActive = true }: SwipeCardProps) => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
 
@@ -65,9 +67,24 @@ export const SwipeCard = ({ restaurant, onSwipe, isActive = true }: SwipeCardPro
           <div className="absolute top-4 left-4">
             <span className="price-badge">{restaurant.price}</span>
           </div>
-          <div className="absolute top-4 right-4 flex items-center space-x-1 bg-black/50 px-2 py-1 rounded-full">
-            <Star className="w-3 h-3 text-yellow-400 fill-current" />
-            <span className="text-white text-xs font-medium">{restaurant.rating}</span>
+          <div className="absolute top-4 right-4 flex items-center space-x-2">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onFavorite?.(restaurant);
+              }}
+              className={`p-2 rounded-full transition-all duration-200 ${
+                isFavorited 
+                  ? 'bg-yellow-400 text-white shadow-lg' 
+                  : 'bg-black/50 text-white hover:bg-yellow-400/80'
+              }`}
+            >
+              <Star className={`w-4 h-4 ${isFavorited ? 'fill-current' : ''}`} />
+            </button>
+            <div className="flex items-center space-x-1 bg-black/50 px-2 py-1 rounded-full">
+              <Star className="w-3 h-3 text-yellow-400 fill-current" />
+              <span className="text-white text-xs font-medium">{restaurant.rating}</span>
+            </div>
           </div>
           {restaurant.deals && (
             <div className="absolute bottom-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-bold">

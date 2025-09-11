@@ -25,6 +25,7 @@ const Index = () => {
   const [currentRestaurants, setCurrentRestaurants] = useState<Restaurant[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedRestaurants, setLikedRestaurants] = useState<Restaurant[]>([]);
+  const [favoriteRestaurants, setFavoriteRestaurants] = useState<Restaurant[]>([]);
   const [showLiked, setShowLiked] = useState(false);
   const [swipeAnimation, setSwipeAnimation] = useState<'left' | 'right' | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -76,6 +77,18 @@ const Index = () => {
       setCurrentIndex(prev => prev + 1);
       setSwipeAnimation(null);
     }, 600);
+  };
+
+  const handleFavorite = (restaurant: Restaurant) => {
+    const isFavorited = favoriteRestaurants.some(fav => fav.id === restaurant.id);
+    
+    if (isFavorited) {
+      setFavoriteRestaurants(prev => prev.filter(fav => fav.id !== restaurant.id));
+      toast.success(`Removed ${restaurant.name} from favorites`);
+    } else {
+      setFavoriteRestaurants(prev => [...prev, restaurant]);
+      toast.success(`Added ${restaurant.name} to favorites! ⭐`);
+    }
   };
 
   const resetCards = () => {
@@ -209,6 +222,8 @@ const Index = () => {
                     <SwipeCard 
                       restaurant={currentRestaurants[currentIndex + 1]}
                       onSwipe={() => {}}
+                      onFavorite={handleFavorite}
+                      isFavorited={favoriteRestaurants.some(fav => fav.id === currentRestaurants[currentIndex + 1]?.id)}
                       isActive={false}
                     />
                   </div>
@@ -224,6 +239,8 @@ const Index = () => {
                   <SwipeCard 
                     restaurant={currentRestaurant}
                     onSwipe={handleSwipe}
+                    onFavorite={handleFavorite}
+                    isFavorited={favoriteRestaurants.some(fav => fav.id === currentRestaurant.id)}
                     isActive={!swipeAnimation}
                   />
                 </div>
