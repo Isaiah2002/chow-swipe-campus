@@ -7,7 +7,8 @@ import { SwipeCard } from '@/components/SwipeCard';
 import { FilterBar } from '@/components/FilterBar';
 import { LikedRestaurants } from '@/components/LikedRestaurants';
 import { Button } from '@/components/ui/button';
-import { Heart, RotateCcw, LogOut, User } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Heart, RotateCcw, LogOut, User, Search } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
   const [likedRestaurants, setLikedRestaurants] = useState<Restaurant[]>([]);
   const [showLiked, setShowLiked] = useState(false);
   const [swipeAnimation, setSwipeAnimation] = useState<'left' | 'right' | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<Filters>({
     maxPrice: '$$$',
     maxDistance: 5,
@@ -32,7 +34,7 @@ const Index = () => {
     minRating: 3.5
   });
 
-  // Filter restaurants based on current filters
+  // Filter restaurants based on current filters and search
   useEffect(() => {
     const priceValues: { [key: string]: number } = { '$': 1, '$$': 2, '$$$': 3 };
     const maxPriceValue = priceValues[filters.maxPrice];
@@ -44,13 +46,16 @@ const Index = () => {
       const matchesRating = restaurant.rating >= filters.minRating;
       const matchesDietary = filters.dietary.length === 0 || 
         filters.dietary.some(diet => restaurant.dietary.includes(diet));
+      const matchesSearch = searchTerm === '' || 
+        restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        restaurant.cuisine.toLowerCase().includes(searchTerm.toLowerCase());
       
-      return matchesPrice && matchesDistance && matchesRating && matchesDietary;
+      return matchesPrice && matchesDistance && matchesRating && matchesDietary && matchesSearch;
     });
 
     setCurrentRestaurants(filtered);
     setCurrentIndex(0);
-  }, [filters]);
+  }, [filters, searchTerm]);
 
   const handleSwipe = (direction: 'left' | 'right') => {
     const currentRestaurant = currentRestaurants[currentIndex];
@@ -138,6 +143,18 @@ const Index = () => {
           </div>
           
           <FilterBar filters={filters} onFiltersChange={setFilters} />
+          
+          {/* Search Bar */}
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+            <Input
+              type="text"
+              placeholder="Search restaurants or cuisine..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 bg-card border-border/50"
+            />
+          </div>
         </div>
       </div>
 
