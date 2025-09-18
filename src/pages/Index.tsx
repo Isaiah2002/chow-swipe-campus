@@ -1,20 +1,24 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
+import { useLocation } from '@/hooks/useLocation';
 import { Restaurant, Filters } from '@/types/restaurant';
 import { restaurants } from '@/data/restaurants';
+import { calculateDistance } from '@/utils/distance';
 import { SwipeCard } from '@/components/SwipeCard';
 import { FilterBar } from '@/components/FilterBar';
 import { LikedRestaurants } from '@/components/LikedRestaurants';
+import { LocationPrompt } from '@/components/LocationPrompt';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Heart, RotateCcw, LogOut, User, Search } from 'lucide-react';
+import { Heart, RotateCcw, LogOut, User, Search, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
 import BottomNav from '@/components/BottomNav';
 
 const Index = () => {
   const navigate = useNavigate();
   const { user, loading, signOut } = useAuth();
+  const { location, error: locationError, loading: locationLoading, permissionStatus, requestLocation } = useLocation();
 
   // Redirect to auth if not logged in
   useEffect(() => {
@@ -29,6 +33,7 @@ const Index = () => {
   const [showLiked, setShowLiked] = useState(false);
   const [swipeAnimation, setSwipeAnimation] = useState<'left' | 'right' | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [showLocationPrompt, setShowLocationPrompt] = useState(false);
   const [filters, setFilters] = useState<Filters>({
     maxPrice: '$$$',
     maxDistance: 5,
@@ -41,7 +46,24 @@ const Index = () => {
     const priceValues: { [key: string]: number } = { '$': 1, '$$': 2, '$$$': 3 };
     const maxPriceValue = priceValues[filters.maxPrice];
 
-    const filtered = restaurants.filter(restaurant => {
+    let restaurantsWithDistance = restaurants.map(restaurant => {
+      // Calculate actual distance if location is available
+      if (location && restaurant.latitude && restaurant.longitude) {
+        const actualDistance = calculateDistance(
+          { latitude: location.latitude, longitude: location.longitude },
+          { latitude: restaurant.latitude, longitude: restaurant.longitude }
+        );
+        return { ...restaurant, distance: actualDistance };
+      }
+      return restaurant;
+    });
+
+    // Sort by distance if location is available
+    if (location) {
+      restaurantsWithDistance = restaurantsWithDistance.sort((a, b) => a.distance - b.distance);
+    }
+
+    const filtered = restaurantsWithDistance.filter(restaurant => {
       const restaurantPriceValue = priceValues[restaurant.price];
       const matchesPrice = restaurantPriceValue <= maxPriceValue;
       const matchesDistance = restaurant.distance <= filters.maxDistance;
@@ -57,7 +79,7 @@ const Index = () => {
 
     setCurrentRestaurants(filtered);
     setCurrentIndex(0);
-  }, [filters, searchTerm]);
+  }, [filters, searchTerm, location]);
 
   const handleSwipe = (direction: 'left' | 'right') => {
     const currentRestaurant = currentRestaurants[currentIndex];
@@ -97,6 +119,11 @@ const Index = () => {
     toast.success('Cards reset! Start swiping again 🔄');
   };
 
+  const handleLocationRequest = () => {
+    requestLocation();
+    setShowLocationPrompt(false);
+  };
+
   const currentRestaurant = currentRestaurants[currentIndex];
   const hasMoreCards = currentIndex < currentRestaurants.length;
 
@@ -132,6 +159,26 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20">
+      {/* Location Prompt Modal */}
+      {showLocationPrompt && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="w-full max-w-sm">
+            <LocationPrompt 
+              onRequestLocation={handleLocationRequest}
+              error={locationError?.message}
+              loading={locationLoading}
+            />
+            <Button
+              variant="ghost"
+              onClick={() => setShowLocationPrompt(false)}
+              className="w-full mt-2 text-muted-foreground"
+            >
+              Maybe later
+            </Button>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="p-4 pb-2">
         <div className="max-w-md mx-auto space-y-4">
@@ -143,17 +190,31 @@ const Index = () => {
               </div>
               <div>
                 <h2 className="font-semibold text-card-foreground">Welcome back!</h2>
-                <p className="text-sm text-muted-foreground">{user.email}</p>
+                <p className="text-sm text-muted-foreground">
+                  {location ? `📍 ${location.latitude.toFixed(4)}, ${location.longitude.toFixed(4)}` : user.email}
+                </p>
               </div>
             </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={signOut}
-              className="text-muted-foreground hover:text-foreground"
-            >
-              <LogOut className="w-4 h-4" />
-            </Button>
+            <div className="flex items-center space-x-2">
+              {!location && permissionStatus !== 'denied' && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowLocationPrompt(true)}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <MapPin className="w-4 h-4" />
+                </Button>
+              )}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={signOut}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <LogOut className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
           
           <FilterBar filters={filters} onFiltersChange={setFilters} />

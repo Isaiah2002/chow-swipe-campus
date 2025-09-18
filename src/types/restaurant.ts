@@ -10,6 +10,8 @@ export interface Restaurant {
   dietary: string[];
   deals?: string;
   estimatedTime: number; // minutes
+  latitude?: number;
+  longitude?: number;
 }
 
 export interface Filters {

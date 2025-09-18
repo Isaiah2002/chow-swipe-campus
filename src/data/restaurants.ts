@@ -18,7 +18,9 @@ export const restaurants: Restaurant[] = [
     description: 'Huge burritos perfect for sharing (or not). Student favorite!',
     dietary: ['Vegetarian', 'Vegan Options'],
     deals: '50% off after 8pm',
-    estimatedTime: 15
+    estimatedTime: 15,
+    latitude: 40.7128,
+    longitude: -74.0060
   },
   {
     id: '2', 
@@ -31,7 +33,9 @@ export const restaurants: Restaurant[] = [
     description: 'Authentic ramen bowls that will warm your soul and budget',
     dietary: ['Vegetarian Options'],
     deals: 'Buy 2 get 1 free Tuesdays',
-    estimatedTime: 20
+    estimatedTime: 20,
+    latitude: 40.7589,
+    longitude: -73.9851
   },
   {
     id: '3',
@@ -44,7 +48,9 @@ export const restaurants: Restaurant[] = [
     description: 'Late night pizza that actually tastes good!',
     dietary: ['Vegetarian', 'Gluten-Free'],
     deals: 'Free delivery for students',
-    estimatedTime: 25
+    estimatedTime: 25,
+    latitude: 40.6892,
+    longitude: -74.0445
   },
   {
     id: '4',
@@ -56,7 +62,9 @@ export const restaurants: Restaurant[] = [
     image: saladImage,
     description: 'Fresh salads and grain bowls. Your mom would approve!',
     dietary: ['Vegetarian', 'Vegan', 'Gluten-Free'],
-    estimatedTime: 12
+    estimatedTime: 12,
+    latitude: 40.7505,
+    longitude: -73.9934
   },
   {
     id: '5',
@@ -69,7 +77,9 @@ export const restaurants: Restaurant[] = [
     description: 'Open 24/7. Perfect for those late study sessions.',
     dietary: ['Vegetarian Options'],
     deals: '20% off after midnight',
-    estimatedTime: 18
+    estimatedTime: 18,
+    latitude: 40.7282,
+    longitude: -73.9942
   },
   {
     id: '6',
@@ -82,6 +92,8 @@ export const restaurants: Restaurant[] = [
     description: 'Authentic flavors that pack a punch and great value!',
     dietary: ['Vegetarian', 'Vegan Options'],
     deals: 'Lunch buffet $8.99',
-    estimatedTime: 22
+    estimatedTime: 22,
+    latitude: 40.7614,
+    longitude: -73.9776
   }
 ];
