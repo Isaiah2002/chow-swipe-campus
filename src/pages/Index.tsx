@@ -191,21 +191,25 @@ const Index = () => {
               <div>
                 <h2 className="font-semibold text-card-foreground">Welcome back!</h2>
                 <p className="text-sm text-muted-foreground">
-                  {location ? `📍 ${location.latitude.toFixed(4)}, ${location.longitude.toFixed(4)}` : user.email}
+                  {location 
+                    ? `📍 Showing nearby restaurants • ${currentRestaurants.length} found`
+                    : user.email
+                  }
                 </p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              {!location && permissionStatus !== 'denied' && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setShowLocationPrompt(true)}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <MapPin className="w-4 h-4" />
-                </Button>
-              )}
+            {!location && permissionStatus !== 'denied' && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowLocationPrompt(true)}
+                className="text-muted-foreground hover:text-foreground relative"
+              >
+                <MapPin className="w-4 h-4" />
+                <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-pulse" />
+              </Button>
+            )}
               <Button
                 variant="ghost"
                 size="sm"
