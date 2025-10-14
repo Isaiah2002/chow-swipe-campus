@@ -11,6 +11,13 @@ import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
 import juniorDog from '@/assets/menu/junior-dog.jpg';
 import beefDog from '@/assets/menu/beef-dog.jpg';
 import veggieDog from '@/assets/menu/veggie-dog.jpg';
+import famousBurgerSingle from '@/assets/menu/famous-burger-single.jpg';
+import famousBurgerDouble from '@/assets/menu/famous-burger-double.jpg';
+import baconDoubleCheese from '@/assets/menu/bacon-double-cheeseburger.jpg';
+import turkeyBurger from '@/assets/menu/turkey-burger.jpg';
+import bigBenBurger from '@/assets/menu/big-ben-burger.jpg';
+import veggieBeyondBurger from '@/assets/menu/veggie-beyond-burger.jpg';
+import veggieImpossibleBurger from '@/assets/menu/veggie-impossible-burger.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -69,6 +76,55 @@ export const restaurants: Restaurant[] = [
         category: 'Vegetarian',
         image: veggieDog,
         description: 'Vegetarian hot dog option'
+      },
+      {
+        id: 'famous-burger-single',
+        name: "Ben's Famous Burger - Single",
+        category: 'Burgers',
+        image: famousBurgerSingle,
+        description: 'Our signature single patty burger'
+      },
+      {
+        id: 'famous-burger-double',
+        name: "Ben's Famous Burger - Double",
+        category: 'Burgers',
+        image: famousBurgerDouble,
+        description: 'Double the beef, double the flavor'
+      },
+      {
+        id: 'bacon-double-cheeseburger',
+        name: 'Bacon Double Cheeseburger',
+        category: 'Burgers',
+        image: baconDoubleCheese,
+        description: 'Toasted brioche bun with American cheese and bacon'
+      },
+      {
+        id: 'turkey-burger',
+        name: 'Turkey Burger',
+        category: 'Burgers',
+        image: turkeyBurger,
+        description: 'Lean turkey patty burger'
+      },
+      {
+        id: 'big-ben-burger',
+        name: 'Big Ben Burger',
+        category: 'Burgers',
+        image: bigBenBurger,
+        description: 'The biggest burger on the menu'
+      },
+      {
+        id: 'veggie-beyond-burger',
+        name: 'Veggie Beyond Burger',
+        category: 'Vegetarian',
+        image: veggieBeyondBurger,
+        description: 'Plant-based Beyond Meat burger'
+      },
+      {
+        id: 'veggie-impossible-burger',
+        name: 'Veggie Impossible Burger',
+        category: 'Vegetarian',
+        image: veggieImpossibleBurger,
+        description: 'Plant-based Impossible Meat burger'
       }
     ]
   },
