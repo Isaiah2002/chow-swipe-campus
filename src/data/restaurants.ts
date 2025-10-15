@@ -32,6 +32,14 @@ import halfGallonVeggieChili from '@/assets/menu/half-gallon-veggie-chili.jpg';
 import gallonVeggieChili from '@/assets/menu/gallon-veggie-chili.jpg';
 import halfGallonTurkeyChili from '@/assets/menu/half-gallon-turkey-chili.jpg';
 import gallonTurkeyChili from '@/assets/menu/gallon-turkey-chili.jpg';
+import mamboChickenTenders from '@/assets/menu/mambo-chicken-tenders.jpg';
+import chickenTenders from '@/assets/menu/chicken-tenders.jpg';
+import burgerSub from '@/assets/menu/burger-sub.jpg';
+import turkeyBurgerSub from '@/assets/menu/turkey-burger-sub.jpg';
+import chickenSandwich from '@/assets/menu/chicken-sandwich.jpg';
+import impossibleBurgerSub from '@/assets/menu/impossible-burger-sub.jpg';
+import beyondBurgerSub from '@/assets/menu/beyond-burger-sub.jpg';
+import blt from '@/assets/menu/blt.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -237,6 +245,62 @@ export const restaurants: Restaurant[] = [
         category: 'Bulk Chili',
         image: gallonTurkeyChili,
         description: 'Full gallon of lean turkey chili to go'
+      },
+      {
+        id: 'mambo-chicken-tenders',
+        name: 'Mambo Chicken Tenders with Fries',
+        category: 'Sandwiches & Subs',
+        image: mamboChickenTenders,
+        description: 'Crispy chicken tenders with fries'
+      },
+      {
+        id: 'chicken-tenders',
+        name: 'Chicken Tenders with Fries',
+        category: 'Sandwiches & Subs',
+        image: chickenTenders,
+        description: 'Classic chicken tenders with fries'
+      },
+      {
+        id: 'burger-sub',
+        name: 'Burger Sub',
+        category: 'Sandwiches & Subs',
+        image: burgerSub,
+        description: 'Burger patty on a sub roll'
+      },
+      {
+        id: 'turkey-burger-sub',
+        name: 'Turkey Burger Sub',
+        category: 'Sandwiches & Subs',
+        image: turkeyBurgerSub,
+        description: 'Turkey burger patty on a sub roll'
+      },
+      {
+        id: 'chicken-sandwich',
+        name: 'Chicken Sandwich',
+        category: 'Sandwiches & Subs',
+        image: chickenSandwich,
+        description: 'Grilled or fried chicken sandwich'
+      },
+      {
+        id: 'impossible-burger-sub',
+        name: 'Impossible Burger Sub',
+        category: 'Sandwiches & Subs',
+        image: impossibleBurgerSub,
+        description: 'Plant-based Impossible patty on a sub roll'
+      },
+      {
+        id: 'beyond-burger-sub',
+        name: 'Beyond Burger Sub',
+        category: 'Sandwiches & Subs',
+        image: beyondBurgerSub,
+        description: 'Plant-based Beyond patty on a sub roll'
+      },
+      {
+        id: 'blt',
+        name: 'BLT',
+        category: 'Sandwiches & Subs',
+        image: blt,
+        description: 'Classic bacon, lettuce, and tomato sandwich'
       }
     ]
   },
