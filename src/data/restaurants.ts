@@ -47,6 +47,40 @@ import iceCreamCone from '@/assets/menu/ice-cream-cone.jpg';
 import iceCreamSundae from '@/assets/menu/ice-cream-sundae.jpg';
 import kidsCone from '@/assets/menu/kids-cone.jpg';
 import iceCreamCup from '@/assets/menu/ice-cream-cup.jpg';
+import cheesePizza from '@/assets/menu/cheese-pizza.jpg';
+import pepperoniPizza from '@/assets/menu/pepperoni-pizza.jpg';
+import margheritaPizza from '@/assets/menu/margherita-pizza.jpg';
+import veggiePizza from '@/assets/menu/veggie-pizza.jpg';
+import meatLoversPizza from '@/assets/menu/meat-lovers-pizza.jpg';
+import bbqChickenPizza from '@/assets/menu/bbq-chicken-pizza.jpg';
+import whiteCheesePizza from '@/assets/menu/white-cheese-pizza.jpg';
+import veganPizza from '@/assets/menu/vegan-pizza.jpg';
+import hangoverPizza from '@/assets/menu/hangover-pizza.jpg';
+import spicyHawaiianPizza from '@/assets/menu/spicy-hawaiian-pizza.jpg';
+import derhoPizza from '@/assets/menu/derho-pizza.jpg';
+import amaterePizza from '@/assets/menu/amatere-pizza.jpg';
+import mushroomPizza from '@/assets/menu/mushroom-pizza.jpg';
+import asmarinoPizza from '@/assets/menu/asmarino-pizza.jpg';
+import ferroviaPizza from '@/assets/menu/ferrovia-pizza.jpg';
+import vilaggioPizza from '@/assets/menu/vilaggio-pizza.jpg';
+import polpettePanino from '@/assets/menu/polpette-panino.jpg';
+import prosciuttoPanino from '@/assets/menu/prosciutto-panino.jpg';
+import chickenParmaPanino from '@/assets/menu/chicken-parma-panino.jpg';
+import minyasMixSalad from '@/assets/menu/minyas-mix-salad.jpg';
+import arugulaSalad from '@/assets/menu/arugula-salad.jpg';
+import caesarSalad from '@/assets/menu/caesar-salad.jpg';
+import buffaloWings from '@/assets/menu/buffalo-wings.jpg';
+import cheeseFries from '@/assets/menu/cheese-fries.jpg';
+import meatballs from '@/assets/menu/meatballs.jpg';
+import garlicBread from '@/assets/menu/garlic-bread.jpg';
+import ranchDip from '@/assets/menu/ranch-dip.jpg';
+import blueCheeseDip from '@/assets/menu/blue-cheese-dip.jpg';
+import coolDrinks from '@/assets/menu/cool-drinks.jpg';
+import freshJuice from '@/assets/menu/fresh-juice.jpg';
+import sanPellegrinoCan from '@/assets/menu/san-pellegrino-can.jpg';
+import sanPellegrinoBottle from '@/assets/menu/san-pellegrino-bottle.jpg';
+import waterBottle from '@/assets/menu/water-bottle.jpg';
+import tiramisuDessert from '@/assets/menu/tiramisu-dessert.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -373,7 +407,247 @@ export const restaurants: Restaurant[] = [
     deals: 'Free delivery to campus',
     estimatedTime: 25,
     latitude: 38.9200,
-    longitude: -77.0180
+    longitude: -77.0180,
+    menu: [
+      {
+        id: 'cheese-pizza',
+        name: 'Cheese Pizza',
+        category: 'Pizzas',
+        image: cheesePizza,
+        description: 'Classic cheese pizza with mozzarella'
+      },
+      {
+        id: 'pepperoni-pizza',
+        name: 'Pepperoni Pizza',
+        category: 'Pizzas',
+        image: pepperoniPizza,
+        description: 'Traditional pepperoni pizza'
+      },
+      {
+        id: 'margherita-pizza',
+        name: 'Margherita Pizza',
+        category: 'Pizzas',
+        image: margheritaPizza,
+        description: 'Fresh mozzarella, tomatoes, and basil'
+      },
+      {
+        id: 'veggie-pizza',
+        name: 'Veggie Pizza',
+        category: 'Pizzas',
+        image: veggiePizza,
+        description: 'Loaded with fresh vegetables'
+      },
+      {
+        id: 'meat-lovers-pizza',
+        name: 'Meat Lovers Pizza',
+        category: 'Pizzas',
+        image: meatLoversPizza,
+        description: 'Packed with assorted meats'
+      },
+      {
+        id: 'bbq-chicken-pizza',
+        name: 'BBQ Chicken Pizza',
+        category: 'Pizzas',
+        image: bbqChickenPizza,
+        description: 'BBQ sauce, grilled chicken, and red onions'
+      },
+      {
+        id: 'white-cheese-pizza',
+        name: 'White Cheese Pizza',
+        category: 'Pizzas',
+        image: whiteCheesePizza,
+        description: 'White sauce with multiple cheeses'
+      },
+      {
+        id: 'vegan-pizza',
+        name: 'Vegan Pizza',
+        category: 'Pizzas',
+        image: veganPizza,
+        description: 'Plant-based cheese and fresh vegetables'
+      },
+      {
+        id: 'hangover-pizza',
+        name: 'Hangover Pizza',
+        category: 'Pizzas',
+        image: hangoverPizza,
+        description: 'Loaded specialty pizza perfect for late night'
+      },
+      {
+        id: 'spicy-hawaiian-pizza',
+        name: 'Spicy Hawaiian Pizza',
+        category: 'Pizzas',
+        image: spicyHawaiianPizza,
+        description: 'Pineapple, ham, and spicy jalapeños'
+      },
+      {
+        id: 'derho-pizza',
+        name: 'Derho Pizza',
+        category: 'Pizzas',
+        image: derhoPizza,
+        description: 'Ethiopian-inspired specialty pizza'
+      },
+      {
+        id: 'amatere-pizza',
+        name: 'Amatere Pizza',
+        category: 'Pizzas',
+        image: amaterePizza,
+        description: 'Specialty pizza with unique toppings'
+      },
+      {
+        id: 'mushroom-pizza',
+        name: 'Mushroom Pizza',
+        category: 'Pizzas',
+        image: mushroomPizza,
+        description: 'Loaded with fresh mushrooms'
+      },
+      {
+        id: 'asmarino-pizza',
+        name: 'Asmarino Pizza',
+        category: 'Pizzas',
+        image: asmarinoPizza,
+        description: 'Signature specialty pizza'
+      },
+      {
+        id: 'ferrovia-pizza',
+        name: 'Ferrovia Pizza',
+        category: 'Pizzas',
+        image: ferroviaPizza,
+        description: 'Italian-style specialty pizza'
+      },
+      {
+        id: 'vilaggio-pizza',
+        name: 'Vilaggio Pizza',
+        category: 'Pizzas',
+        image: vilaggioPizza,
+        description: 'Village-style specialty pizza'
+      },
+      {
+        id: 'polpette-panino',
+        name: 'Polpette Panino',
+        category: 'Panini',
+        image: polpettePanino,
+        description: 'Italian meatball sandwich'
+      },
+      {
+        id: 'prosciutto-panino',
+        name: 'Prosciutto Panino',
+        category: 'Panini',
+        image: prosciuttoPanino,
+        description: 'Prosciutto Italian sandwich'
+      },
+      {
+        id: 'chicken-parma-panino',
+        name: 'Chicken Parma Panino',
+        category: 'Panini',
+        image: chickenParmaPanino,
+        description: 'Chicken Parmesan sandwich'
+      },
+      {
+        id: 'minyas-mix-salad',
+        name: "Minya's Mix Salad",
+        category: 'Salads',
+        image: minyasMixSalad,
+        description: 'House special mixed greens salad'
+      },
+      {
+        id: 'arugula-salad',
+        name: 'Arugula Salad',
+        category: 'Salads',
+        image: arugulaSalad,
+        description: 'Fresh arugula with toppings'
+      },
+      {
+        id: 'caesar-salad',
+        name: 'Caesar Salad',
+        category: 'Salads',
+        image: caesarSalad,
+        description: 'Classic Caesar salad'
+      },
+      {
+        id: 'buffalo-wings',
+        name: 'Buffalo Wings',
+        category: 'Appetizers',
+        image: buffaloWings,
+        description: 'Spicy buffalo chicken wings'
+      },
+      {
+        id: 'cheese-fries',
+        name: 'Cheese Fries',
+        category: 'Appetizers',
+        image: cheeseFries,
+        description: 'Fries covered in melted cheese'
+      },
+      {
+        id: 'meatballs',
+        name: 'Meatballs',
+        category: 'Appetizers',
+        image: meatballs,
+        description: 'Italian-style meatballs'
+      },
+      {
+        id: 'garlic-bread',
+        name: 'Garlic Bread',
+        category: 'Appetizers',
+        image: garlicBread,
+        description: 'Toasted bread with garlic butter'
+      },
+      {
+        id: 'ranch-dip',
+        name: 'Ranch Dip',
+        category: 'Extras',
+        image: ranchDip,
+        description: 'Creamy ranch dipping sauce'
+      },
+      {
+        id: 'blue-cheese-dip',
+        name: 'Blue Cheese Dip',
+        category: 'Extras',
+        image: blueCheeseDip,
+        description: 'Tangy blue cheese dipping sauce'
+      },
+      {
+        id: 'cool-drinks',
+        name: 'Cool Drinks',
+        category: 'Beverages',
+        image: coolDrinks,
+        description: 'Assorted soft drinks'
+      },
+      {
+        id: 'fresh-juice',
+        name: 'Fresh Juice',
+        category: 'Beverages',
+        image: freshJuice,
+        description: 'Freshly squeezed juice'
+      },
+      {
+        id: 'san-pellegrino-can',
+        name: 'San Pellegrino Can',
+        category: 'Beverages',
+        image: sanPellegrinoCan,
+        description: 'Italian sparkling fruit beverage'
+      },
+      {
+        id: 'san-pellegrino-bottle',
+        name: 'San Pellegrino Bottle',
+        category: 'Beverages',
+        image: sanPellegrinoBottle,
+        description: 'Sparkling mineral water'
+      },
+      {
+        id: 'water-bottle',
+        name: 'Water Bottle',
+        category: 'Beverages',
+        image: waterBottle,
+        description: 'Bottled water'
+      },
+      {
+        id: 'tiramisu-dessert',
+        name: 'Tiramisu Dessert',
+        category: 'Desserts',
+        image: tiramisuDessert,
+        description: 'Classic Italian tiramisu'
+      }
+    ]
   },
   {
     id: '3',
