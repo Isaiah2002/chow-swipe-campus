@@ -81,6 +81,14 @@ import sanPellegrinoCan from '@/assets/menu/san-pellegrino-can.jpg';
 import sanPellegrinoBottle from '@/assets/menu/san-pellegrino-bottle.jpg';
 import waterBottle from '@/assets/menu/water-bottle.jpg';
 import tiramisuDessert from '@/assets/menu/tiramisu-dessert.jpg';
+import chickfilaChickenSandwich from '@/assets/menu/chickfila-chicken-sandwich.jpg';
+import spicyChickenSandwich from '@/assets/menu/spicy-chicken-sandwich.jpg';
+import chickfilaNuggets from '@/assets/menu/chickfila-nuggets.jpg';
+import grilledNuggets from '@/assets/menu/grilled-nuggets.jpg';
+import chickfilaDeluxeSandwich from '@/assets/menu/chickfila-deluxe-sandwich.jpg';
+import chickfilaCoolWrap from '@/assets/menu/chickfila-cool-wrap.jpg';
+import chickfilaChickNStrips from '@/assets/menu/chickfila-chick-n-strips.jpg';
+import grilledChickenSandwich from '@/assets/menu/grilled-chicken-sandwich.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -656,13 +664,71 @@ export const restaurants: Restaurant[] = [
     price: '$',
     rating: 4.4,
     distance: 0.1,
-    image: dinerImage,
+    image: chickfilaChickenSandwich,
     description: 'Right on campus in the Blackburn Student Center. Fresh, quality chicken (closed Sundays).',
     dietary: ['Gluten-Free Options'],
     deals: 'Meal plan accepted',
     estimatedTime: 8,
     latitude: 38.9222,
-    longitude: -77.0194
+    longitude: -77.0194,
+    menu: [
+      {
+        id: 'chickfila-chicken-sandwich',
+        name: 'Chick-fil-A Chicken Sandwich',
+        category: 'Entrees',
+        image: chickfilaChickenSandwich,
+        description: 'Our original pressure-cooked chicken sandwich'
+      },
+      {
+        id: 'spicy-chicken-sandwich',
+        name: 'Spicy Chicken Sandwich',
+        category: 'Entrees',
+        image: spicyChickenSandwich,
+        description: 'Spicy version of our famous chicken sandwich'
+      },
+      {
+        id: 'chickfila-nuggets',
+        name: 'Chick-fil-A Nuggets',
+        category: 'Entrees',
+        image: chickfilaNuggets,
+        description: 'Bite-sized pieces of tender chicken'
+      },
+      {
+        id: 'grilled-nuggets',
+        name: 'Grilled Nuggets',
+        category: 'Entrees',
+        image: grilledNuggets,
+        description: 'Grilled chicken nuggets'
+      },
+      {
+        id: 'chickfila-deluxe-sandwich',
+        name: 'Chick-fil-A Deluxe Sandwich',
+        category: 'Entrees',
+        image: chickfilaDeluxeSandwich,
+        description: 'Chicken sandwich with lettuce, tomato, and cheese'
+      },
+      {
+        id: 'chickfila-cool-wrap',
+        name: 'Chick-fil-A Cool Wrap',
+        category: 'Entrees',
+        image: chickfilaCoolWrap,
+        description: 'Grilled chicken with lettuce in a wrap'
+      },
+      {
+        id: 'chickfila-chick-n-strips',
+        name: 'Chick-fil-A Chick-n-Strips',
+        category: 'Entrees',
+        image: chickfilaChickNStrips,
+        description: 'Crispy chicken strips'
+      },
+      {
+        id: 'grilled-chicken-sandwich',
+        name: 'Grilled Chicken Sandwich',
+        category: 'Entrees',
+        image: grilledChickenSandwich,
+        description: 'Grilled chicken breast on a bun'
+      }
+    ]
   },
   {
     id: '4',
