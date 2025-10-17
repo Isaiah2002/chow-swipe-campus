@@ -170,6 +170,7 @@ import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
 import bambaPolloCarbon from '@/assets/menu/bamba-pollo-carbon.jpg';
 import bambaCarnitas from '@/assets/menu/bamba-carnitas.jpg';
 import bambaChorizo from '@/assets/menu/bamba-chorizo.jpg';
+import bambaElGringo from '@/assets/menu/bamba-el-gringo.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1503,7 +1504,7 @@ export const restaurants: Restaurant[] = [
         id: 'el-gringo',
         name: 'El Gringo',
         category: 'Tacos Nuestros',
-        image: bambaCarneAsada,
+        image: bambaElGringo,
         description: 'Bamba spiced ground beef, bacon bits, lettuce, ranch, pico de gallo, cheddar quesadilla',
         price: 5.50
       },
