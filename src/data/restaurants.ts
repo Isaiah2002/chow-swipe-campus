@@ -166,6 +166,7 @@ import bambaLoadedFries from '@/assets/menu/bamba-loaded-fries.jpg';
 import bambaTorta from '@/assets/menu/bamba-torta.jpg';
 import bambaTortaBamba from '@/assets/menu/bamba-torta-bamba.jpg';
 import bambaChoriqueso from '@/assets/menu/bamba-choriqueso.jpg';
+import bambaQuesadillaTradicional from '@/assets/menu/bamba-quesadilla-tradicional.jpg';
 import bambaChurros from '@/assets/menu/bamba-churros.jpg';
 import bambaBirria from '@/assets/menu/bamba-birria.jpg';
 import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
@@ -1610,7 +1611,7 @@ export const restaurants: Restaurant[] = [
         id: 'quesadilla-tradicional',
         name: 'Tradicional Quesadilla',
         category: 'Quesadillas',
-        image: bambaQuesoChips,
+        image: bambaQuesadillaTradicional,
         description: 'Choice of tradicional meat, chihuahua cheese, poblano crema, large flour tortilla',
         price: 10.00
       },
