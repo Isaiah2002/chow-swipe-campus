@@ -1145,21 +1145,6 @@ export const restaurants: Restaurant[] = [
     longitude: -77.0270
   },
   {
-    id: '6',
-    name: 'Chidogo\'s',
-    cuisine: 'American',
-    price: '$',
-    rating: 4.1,
-    distance: 0.6,
-    image: burritoImage,
-    description: 'Chicago-style hot dogs and Italian beef sandwiches. Authentic Windy City flavors in DC!',
-    dietary: ['Vegetarian Options'],
-    deals: 'Student combo meals',
-    estimatedTime: 15,
-    latitude: 38.9150,
-    longitude: -77.0320
-  },
-  {
     id: '7',
     name: 'Howard Thai Restaurant',
     cuisine: 'Thai',
