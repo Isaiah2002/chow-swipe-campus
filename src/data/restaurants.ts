@@ -15,6 +15,7 @@ import coupePancakes from '@/assets/menu/coupe-pancakes-real.jpg';
 import coupeHuevosRancheros from '@/assets/menu/coupe-huevos-rancheros.jpg';
 import coupeFrenchToast from '@/assets/menu/coupe-french-toast.jpg';
 import coupeChickenWaffle from '@/assets/menu/coupe-chicken-waffle.jpg';
+import coupeYogurtParfait from '@/assets/menu/coupe-yogurt-parfait.jpg';
 import halfSmokeOriginal from '@/assets/menu/half-smoke-original.jpg';
 import turkeyDog from '@/assets/menu/turkey-dog.jpg';
 import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
@@ -1261,7 +1262,8 @@ export const restaurants: Restaurant[] = [
         name: 'Yogurt Parfait',
         price: 10.00,
         category: 'Breakfast All Day',
-        description: 'Yogurt, fresh berries, banana and housemade granola'
+        description: 'Yogurt, fresh berries, banana and housemade granola',
+        image: coupeYogurtParfait
       },
       {
         id: 'coupe-eggs-benedict',
