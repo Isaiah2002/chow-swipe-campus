@@ -18,6 +18,7 @@ import coupeChickenWaffle from '@/assets/menu/coupe-chicken-waffle.jpg';
 import coupeYogurtParfait from '@/assets/menu/coupe-yogurt-parfait.jpg';
 import coupeCaesarSalad from '@/assets/menu/coupe-caesar-salad.jpg';
 import coupeBowl from '@/assets/menu/coupe-bowl.jpg';
+import coupeClassicCobb from '@/assets/menu/coupe-classic-cobb.jpg';
 import halfSmokeOriginal from '@/assets/menu/half-smoke-original.jpg';
 import turkeyDog from '@/assets/menu/turkey-dog.jpg';
 import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
@@ -1295,7 +1296,8 @@ export const restaurants: Restaurant[] = [
         name: 'Classic Cobb',
         price: 17.00,
         category: 'Salads & Soups',
-        description: 'Grilled chicken, cucumber, cherry tomatoes, bacon, avocado, romaine lettuce, hard boiled egg, with a blue cheese dressing'
+        description: 'Grilled chicken, cucumber, cherry tomatoes, bacon, avocado, romaine lettuce, hard boiled egg, with a blue cheese dressing',
+        image: coupeClassicCobb
       },
       {
         id: 'coupe-wings',
