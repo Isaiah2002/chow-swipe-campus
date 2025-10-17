@@ -165,6 +165,7 @@ import bambaQuesoChips from '@/assets/menu/bamba-queso-chips.jpg';
 import bambaLoadedFries from '@/assets/menu/bamba-loaded-fries.jpg';
 import bambaTorta from '@/assets/menu/bamba-torta.jpg';
 import bambaTortaBamba from '@/assets/menu/bamba-torta-bamba.jpg';
+import bambaChoriqueso from '@/assets/menu/bamba-choriqueso.jpg';
 import bambaChurros from '@/assets/menu/bamba-churros.jpg';
 import bambaBirria from '@/assets/menu/bamba-birria.jpg';
 import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
@@ -1600,7 +1601,7 @@ export const restaurants: Restaurant[] = [
         id: 'choriqueso-torta',
         name: 'Choriqueso',
         category: 'Super Tortas',
-        image: bambaTorta,
+        image: bambaChoriqueso,
         description: 'Chorizo, chihuahua cheese, guacamole, cotija, pico de gallo, chipotle mayo on French roll',
         price: 11.50
       },
