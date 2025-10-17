@@ -164,6 +164,7 @@ import bambaSignatureTaco from '@/assets/menu/bamba-signature-taco.jpg';
 import bambaQuesoChips from '@/assets/menu/bamba-queso-chips.jpg';
 import bambaLoadedFries from '@/assets/menu/bamba-loaded-fries.jpg';
 import bambaTorta from '@/assets/menu/bamba-torta.jpg';
+import bambaTortaBamba from '@/assets/menu/bamba-torta-bamba.jpg';
 import bambaChurros from '@/assets/menu/bamba-churros.jpg';
 import bambaBirria from '@/assets/menu/bamba-birria.jpg';
 import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
@@ -1591,7 +1592,7 @@ export const restaurants: Restaurant[] = [
         id: 'torta-bamba',
         name: 'Torta Bamba',
         category: 'Super Tortas',
-        image: bambaTorta,
+        image: bambaTortaBamba,
         description: 'Carne asada, chorizo, al pastor, ham, hot dog, beef & chicken milanesa, black beans, chihuahua cheese, mayo, pineapple',
         price: 13.50
       },
