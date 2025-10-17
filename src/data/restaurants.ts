@@ -19,6 +19,7 @@ import coupeYogurtParfait from '@/assets/menu/coupe-yogurt-parfait.jpg';
 import coupeCaesarSalad from '@/assets/menu/coupe-caesar-salad.jpg';
 import coupeBowl from '@/assets/menu/coupe-bowl.jpg';
 import coupeClassicCobb from '@/assets/menu/coupe-classic-cobb.jpg';
+import coupeWings from '@/assets/menu/coupe-wings.jpg';
 import halfSmokeOriginal from '@/assets/menu/half-smoke-original.jpg';
 import turkeyDog from '@/assets/menu/turkey-dog.jpg';
 import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
@@ -1304,7 +1305,8 @@ export const restaurants: Restaurant[] = [
         name: 'House Wings',
         price: 18.00,
         category: 'Starters',
-        description: '6 or 12 sriracha-glazed wings served with ranch or blue cheese'
+        description: '6 or 12 sriracha-glazed wings served with ranch or blue cheese',
+        image: coupeWings
       },
       {
         id: 'coupe-fish-tacos',
