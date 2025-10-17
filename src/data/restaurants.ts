@@ -1672,14 +1672,6 @@ export const restaurants: Restaurant[] = [
         price: 6.00
       },
       {
-        id: 'rubia',
-        name: 'Rubia',
-        category: 'Dulces',
-        image: bambaChurros,
-        description: 'Big thick chewy chocolate chip blondie',
-        price: 5.50
-      },
-      {
         id: 'churro-cookie',
         name: 'Chocolate Chip Churro Crunch Cookie',
         category: 'Dulces',
