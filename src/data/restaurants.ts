@@ -23,6 +23,7 @@ import coupeWings from '@/assets/menu/coupe-wings.jpg';
 import coupeFries from '@/assets/menu/coupe-fries.jpg';
 import coupeSteakFrites from '@/assets/menu/coupe-steak-frites.jpg';
 import coupeFishChips from '@/assets/menu/coupe-fish-chips.jpg';
+import coupeMacCheese from '@/assets/menu/coupe-mac-cheese.jpg';
 import halfSmokeOriginal from '@/assets/menu/half-smoke-original.jpg';
 import turkeyDog from '@/assets/menu/turkey-dog.jpg';
 import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
@@ -1375,7 +1376,8 @@ export const restaurants: Restaurant[] = [
         name: 'Chicken Mac n\' Cheese',
         price: 18.00,
         category: 'Entrees',
-        description: 'Big bowl of our house mac n\' cheese topped with a grilled chicken breast and panko breadcrumbs'
+        description: 'Big bowl of our house mac n\' cheese topped with a grilled chicken breast and panko breadcrumbs',
+        image: coupeMacCheese
       },
       {
         id: 'coupe-rice-bowl',
