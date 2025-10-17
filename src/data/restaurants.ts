@@ -173,6 +173,7 @@ import bambaChorizo from '@/assets/menu/bamba-chorizo.jpg';
 import bambaElGringo from '@/assets/menu/bamba-el-gringo.jpg';
 import bambaJujuBurger from '@/assets/menu/bamba-juju-burger.jpg';
 import bambaSpicyShroom from '@/assets/menu/bamba-spicy-shroom.jpg';
+import bambaFlautas from '@/assets/menu/bamba-flautas.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1555,7 +1556,7 @@ export const restaurants: Restaurant[] = [
         id: 'flautas',
         name: 'Flautas',
         category: 'Crispy Things',
-        image: bambaCarneAsada,
+        image: bambaFlautas,
         description: 'Rolled crispy chicken tacos, pinto beans, lettuce, cotija cheese, crema, pico de gallo',
         price: 10.50
       },
