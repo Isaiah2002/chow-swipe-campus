@@ -156,6 +156,17 @@ import chickfilaPolynesianSauce from '@/assets/menu/chickfila-polynesian-sauce.j
 import chickfilaSrirachaSauce from '@/assets/menu/chickfila-sriracha-sauce.jpg';
 import chickfilaHoneyRoastedBBQ from '@/assets/menu/chickfila-honey-roasted-bbq.jpg';
 import chickfilaZestyBuffalo from '@/assets/menu/chickfila-zesty-buffalo.jpg';
+// Taco Bamba menu images
+import bambaDoubleSmashburger from '@/assets/menu/bamba-double-smashburger.jpg';
+import bambaCarneAsada from '@/assets/menu/bamba-carne-asada.jpg';
+import bambaAlPastor from '@/assets/menu/bamba-al-pastor.jpg';
+import bambaSignatureTaco from '@/assets/menu/bamba-signature-taco.jpg';
+import bambaQuesoChorizo from '@/assets/menu/bamba-queso-chorizo.jpg';
+import bambaLoadedFries from '@/assets/menu/bamba-loaded-fries.jpg';
+import bambaTorta from '@/assets/menu/bamba-torta.jpg';
+import bambaChurros from '@/assets/menu/bamba-churros.jpg';
+import bambaBirria from '@/assets/menu/bamba-birria.jpg';
+import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1405,17 +1416,259 @@ export const restaurants: Restaurant[] = [
   },
   {
     id: '10',
-    name: 'Taco Bamba Shaw',
+    name: 'Taco Bamba City Ridge',
     cuisine: 'Mexican',
-    price: '$',
-    rating: 4.4,
-    distance: 1.0,
+    price: '$$',
+    rating: 4.7,
+    distance: 1.8,
     image: burritoImage,
-    description: 'Modern Mexican with creative tacos and burritos. Late night hours for the campus crowd.',
-    dietary: ['Vegetarian', 'Vegan Options'],
-    deals: 'Taco Tuesday specials',
-    estimatedTime: 16,
-    latitude: 38.9135,
-    longitude: -77.0255
+    description: 'Modern Mexican taqueria by Chef Victor Albisu. Creative tacos, super tortas, and loaded fries with fresh ingredients.',
+    dietary: ['Vegetarian', 'Vegan Options', 'Gluten-Free Options'],
+    deals: 'Free coffee with breakfast',
+    estimatedTime: 25,
+    latitude: 38.9340,
+    longitude: -77.0810,
+    menu: [
+      // Burgers
+      {
+        id: 'bamba-smashburger',
+        name: 'Bamba Double Smashburger',
+        category: 'Burgers',
+        image: bambaDoubleSmashburger,
+        description: 'Brisket chop chop patty, American cheese, chili relish, Bamba smoke sauce',
+        price: 9.00
+      },
+      // Tacos Tradicionales
+      {
+        id: 'carne-asada-taco',
+        name: 'Carne Asada Taco',
+        category: 'Tacos Tradicionales',
+        image: bambaCarneAsada,
+        description: 'Seared beef on corn tortilla with onion and cilantro',
+        price: 4.50
+      },
+      {
+        id: 'al-pastor-taco',
+        name: 'Al Pastor Taco',
+        category: 'Tacos Tradicionales',
+        image: bambaAlPastor,
+        description: 'Spiced pork & pineapple on corn tortilla with onion and cilantro',
+        price: 4.50
+      },
+      {
+        id: 'birria-taco',
+        name: 'Birria Taco',
+        category: 'Tacos Tradicionales',
+        image: bambaBirria,
+        description: 'Slow-roasted lamb on corn tortilla with onion and cilantro',
+        price: 4.75
+      },
+      {
+        id: 'pollo-carbon-taco',
+        name: 'Pollo Al Carbon Taco',
+        category: 'Tacos Tradicionales',
+        image: bambaCarneAsada,
+        description: 'Grilled chicken on corn tortilla with onion and cilantro',
+        price: 4.25
+      },
+      {
+        id: 'carnitas-taco',
+        name: 'Carnitas Taco',
+        category: 'Tacos Tradicionales',
+        image: bambaCarneAsada,
+        description: 'Roasted pork on corn tortilla with onion and cilantro',
+        price: 4.25
+      },
+      {
+        id: 'chorizo-taco',
+        name: 'Chorizo Taco',
+        category: 'Tacos Tradicionales',
+        image: bambaCarneAsada,
+        description: 'Mexican pork sausage on corn tortilla with onion and cilantro',
+        price: 4.25
+      },
+      // Tacos Nuestros (Specialty Tacos)
+      {
+        id: 'taco-bamba',
+        name: 'Taco Bamba',
+        category: 'Tacos Nuestros',
+        image: bambaSignatureTaco,
+        description: 'Skirt steak, chorizo, grilled guacamole, cotija, pickled onion, pickled Fresno, cilantro, chicharron',
+        price: 6.50
+      },
+      {
+        id: 'el-gringo',
+        name: 'El Gringo',
+        category: 'Tacos Nuestros',
+        image: bambaCarneAsada,
+        description: 'Bamba spiced ground beef, bacon bits, lettuce, ranch, pico de gallo, cheddar quesadilla',
+        price: 5.50
+      },
+      {
+        id: 'juju-smashburger',
+        name: 'Juju Da Smashburger Taco',
+        category: 'Tacos Nuestros',
+        image: bambaCarneAsada,
+        description: 'Cheese, onions, lettuce, pickles, Bamba burger sauce on flour tortilla',
+        price: 5.75
+      },
+      {
+        id: 'spicy-shroom',
+        name: 'Spicy Shroom Taco',
+        category: 'Tacos Nuestros',
+        image: bambaCarneAsada,
+        description: 'Chipotle portobellos, grilled corn, cotija, pickled onion, pepitas, heart of palm, cilantro',
+        price: 5.25
+      },
+      // Crispy Things (Appetizers)
+      {
+        id: 'queso-chips',
+        name: 'Queso & Chips',
+        category: 'Crispy Things',
+        image: bambaQuesoChorizo,
+        description: 'Bamba nacho cheese dip with tortilla chips',
+        price: 8.50
+      },
+      {
+        id: 'grilled-guacamole',
+        name: 'Grilled Guacamole & Chips',
+        category: 'Crispy Things',
+        image: bambaGuacamole,
+        description: 'Grilled avocado, jalapeno, onion, lime with chips',
+        price: 9.50
+      },
+      {
+        id: 'bamba-fries',
+        name: 'Bamba Fries',
+        category: 'Crispy Things',
+        image: bambaLoadedFries,
+        description: 'Carne asada, chorizo, queso, pico de gallo, serrano chiles, crema, cotija, grilled guacamole',
+        price: 12.00
+      },
+      {
+        id: 'flautas',
+        name: 'Flautas',
+        category: 'Crispy Things',
+        image: bambaCarneAsada,
+        description: 'Rolled crispy chicken tacos, pinto beans, lettuce, cotija cheese, crema, pico de gallo',
+        price: 10.50
+      },
+      {
+        id: 'el-bacho-nacho',
+        name: 'El Bacho Nacho',
+        category: 'Crispy Things',
+        image: bambaQuesoChorizo,
+        description: 'Crispy nachos with any tradicional meat, salsa morita, crema, nacho cheese, pickled onion, pico de gallo',
+        price: 11.50
+      },
+      {
+        id: 'bamba-wings',
+        name: 'Bamba Wings',
+        category: 'Crispy Things',
+        image: bambaLoadedFries,
+        description: 'Half dozen crispy grilled wings with poblano ranch. Choice of Bamba buffalo sauce, chili garlic butter, or dry spiced',
+        price: 10.00
+      },
+      // Super Tortas (Sandwiches)
+      {
+        id: 'torta-tradicional',
+        name: 'Torta Tradicional',
+        category: 'Super Tortas',
+        image: bambaTorta,
+        description: 'Choice of tradicional meat, chihuahua cheese, mayo, black beans, lettuce, tomato, avocado, pickled jalapeno',
+        price: 11.00
+      },
+      {
+        id: 'torta-bamba',
+        name: 'Torta Bamba',
+        category: 'Super Tortas',
+        image: bambaTorta,
+        description: 'Carne asada, chorizo, al pastor, ham, hot dog, beef & chicken milanesa, black beans, chihuahua cheese, mayo, pineapple',
+        price: 13.50
+      },
+      {
+        id: 'choriqueso-torta',
+        name: 'Choriqueso',
+        category: 'Super Tortas',
+        image: bambaTorta,
+        description: 'Chorizo, chihuahua cheese, guacamole, cotija, pico de gallo, chipotle mayo on French roll',
+        price: 11.50
+      },
+      // Quesadillas
+      {
+        id: 'quesadilla-tradicional',
+        name: 'Tradicional Quesadilla',
+        category: 'Quesadillas',
+        image: bambaQuesoChorizo,
+        description: 'Choice of tradicional meat, chihuahua cheese, poblano crema, large flour tortilla',
+        price: 10.00
+      },
+      {
+        id: 'big-fat-mexican',
+        name: 'Big Fat Mexican Quesadilla',
+        category: 'Quesadillas',
+        image: bambaQuesoChorizo,
+        description: 'Roasted walnut mushroom chorizo, grilled corn, chipotle, mozzarella, crispy onion, basil verde',
+        price: 11.00
+      },
+      {
+        id: 'big-jerk-quesadilla',
+        name: 'The Big Jerk Quesadilla',
+        category: 'Quesadillas',
+        image: bambaQuesoChorizo,
+        description: 'Grilled jerk chicken, spicy pickled pineapple, rajas, burnt chile crema',
+        price: 11.50
+      },
+      // Not Tacos (Bowls & Sides)
+      {
+        id: 'pack-the-bowl',
+        name: 'Pack the Bowl',
+        category: 'Not Tacos',
+        image: bambaLoadedFries,
+        description: 'Bamba salad mix, kale, carrot, cabbage, choice of tradicional filling, corn and black bean quinoa, avocado, pickled red onion',
+        price: 12.00
+      },
+      {
+        id: 'mexican-street-corn',
+        name: 'Mexican Street Corn',
+        category: 'Not Tacos',
+        image: bambaGuacamole,
+        description: 'Grilled corn, mayo, red chile, lime cotija',
+        price: 5.00
+      },
+      {
+        id: 'rice-beans',
+        name: 'Rice & Beans',
+        category: 'Not Tacos',
+        image: bambaCarneAsada,
+        description: 'Black or pinto beans, cotija, pico de gallo',
+        price: 4.50
+      },
+      // Dulces (Desserts)
+      {
+        id: 'churros',
+        name: 'Churros',
+        category: 'Dulces',
+        image: bambaChurros,
+        description: 'Crispy cinnamon-dusted churros dipped in dulce de leche',
+        price: 6.00
+      },
+      {
+        id: 'rubia',
+        name: 'Rubia',
+        category: 'Dulces',
+        image: bambaChurros,
+        description: 'Big thick chewy chocolate chip blondie',
+        price: 5.50
+      },
+      {
+        id: 'churro-cookie',
+        name: 'Chocolate Chip Churro Crunch Cookie',
+        category: 'Dulces',
+        image: bambaChurros,
+        description: 'Chocolate chip cookie with churro crunch',
+        price: 4.50
+      }
+    ]
   }
 ];
