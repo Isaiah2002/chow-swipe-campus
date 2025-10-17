@@ -175,6 +175,7 @@ import bambaJujuBurger from '@/assets/menu/bamba-juju-burger.jpg';
 import bambaSpicyShroom from '@/assets/menu/bamba-spicy-shroom.jpg';
 import bambaFlautas from '@/assets/menu/bamba-flautas.jpg';
 import bambaElBachoNacho from '@/assets/menu/bamba-el-bacho-nacho.jpg';
+import bambaWings from '@/assets/menu/bamba-wings.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1573,7 +1574,7 @@ export const restaurants: Restaurant[] = [
         id: 'bamba-wings',
         name: 'Bamba Wings',
         category: 'Crispy Things',
-        image: bambaLoadedFries,
+        image: bambaWings,
         description: 'Half dozen crispy grilled wings with poblano ranch. Choice of Bamba buffalo sauce, chili garlic butter, or dry spiced',
         price: 10.00
       },
