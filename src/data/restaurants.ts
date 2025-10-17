@@ -168,6 +168,7 @@ import bambaChurros from '@/assets/menu/bamba-churros.jpg';
 import bambaBirria from '@/assets/menu/bamba-birria.jpg';
 import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
 import bambaPolloCarbon from '@/assets/menu/bamba-pollo-carbon.jpg';
+import bambaCarnitas from '@/assets/menu/bamba-carnitas.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1476,7 +1477,7 @@ export const restaurants: Restaurant[] = [
         id: 'carnitas-taco',
         name: 'Carnitas Taco',
         category: 'Tacos Tradicionales',
-        image: bambaCarneAsada,
+        image: bambaCarnitas,
         description: 'Roasted pork on corn tortilla with onion and cilantro',
         price: 4.25
       },
