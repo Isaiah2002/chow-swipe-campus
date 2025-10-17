@@ -171,6 +171,7 @@ import bambaPolloCarbon from '@/assets/menu/bamba-pollo-carbon.jpg';
 import bambaCarnitas from '@/assets/menu/bamba-carnitas.jpg';
 import bambaChorizo from '@/assets/menu/bamba-chorizo.jpg';
 import bambaElGringo from '@/assets/menu/bamba-el-gringo.jpg';
+import bambaJujuBurger from '@/assets/menu/bamba-juju-burger.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1509,10 +1510,10 @@ export const restaurants: Restaurant[] = [
         price: 5.50
       },
       {
-        id: 'juju-smashburger',
-        name: 'Juju Da Smashburger Taco',
+        id: 'juju-burger',
+        name: 'JuJu Da Burger Taco',
         category: 'Tacos Nuestros',
-        image: bambaCarneAsada,
+        image: bambaJujuBurger,
         description: 'Cheese, onions, lettuce, pickles, Bamba burger sauce on flour tortilla',
         price: 5.75
       },
