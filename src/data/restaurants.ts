@@ -1350,7 +1350,7 @@ export const restaurants: Restaurant[] = [
       },
       {
         id: 'coupe-steak-frites',
-        name: 'Steak Frites',
+        name: 'Steak & Frites',
         price: 26.00,
         category: 'Entrees',
         description: '10oz rib eye and side of brown gravy, served with parmesan-truffle fries and mixed greens salad',
