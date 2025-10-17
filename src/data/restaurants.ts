@@ -167,6 +167,7 @@ import bambaTorta from '@/assets/menu/bamba-torta.jpg';
 import bambaTortaBamba from '@/assets/menu/bamba-torta-bamba.jpg';
 import bambaChoriqueso from '@/assets/menu/bamba-choriqueso.jpg';
 import bambaQuesadillaTradicional from '@/assets/menu/bamba-quesadilla-tradicional.jpg';
+import bambaBigFatMexican from '@/assets/menu/bamba-big-fat-mexican.jpg';
 import bambaChurros from '@/assets/menu/bamba-churros.jpg';
 import bambaBirria from '@/assets/menu/bamba-birria.jpg';
 import bambaGuacamole from '@/assets/menu/bamba-guacamole.jpg';
@@ -1619,7 +1620,7 @@ export const restaurants: Restaurant[] = [
         id: 'big-fat-mexican',
         name: 'Big Fat Mexican Quesadilla',
         category: 'Quesadillas',
-        image: bambaQuesoChips,
+        image: bambaBigFatMexican,
         description: 'Roasted walnut mushroom chorizo, grilled corn, chipotle, mozzarella, crispy onion, basil verde',
         price: 11.00
       },
