@@ -17,6 +17,7 @@ import coupeFrenchToast from '@/assets/menu/coupe-french-toast.jpg';
 import coupeChickenWaffle from '@/assets/menu/coupe-chicken-waffle.jpg';
 import coupeYogurtParfait from '@/assets/menu/coupe-yogurt-parfait.jpg';
 import coupeCaesarSalad from '@/assets/menu/coupe-caesar-salad.jpg';
+import coupeBowl from '@/assets/menu/coupe-bowl.jpg';
 import halfSmokeOriginal from '@/assets/menu/half-smoke-original.jpg';
 import turkeyDog from '@/assets/menu/turkey-dog.jpg';
 import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
@@ -1286,7 +1287,8 @@ export const restaurants: Restaurant[] = [
         name: 'The Coupe Bowl',
         price: 14.00,
         category: 'Salads & Soups',
-        description: 'Curried chickpeas, roasted sweet potatoes, pickled red onion, arugula and avocado with a creamy cashew dressing'
+        description: 'Curried chickpeas, roasted sweet potatoes, pickled red onion, arugula and avocado with a creamy cashew dressing',
+        image: coupeBowl
       },
       {
         id: 'coupe-classic-cobb',
