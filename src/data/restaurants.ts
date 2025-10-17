@@ -22,6 +22,7 @@ import coupeClassicCobb from '@/assets/menu/coupe-classic-cobb.jpg';
 import coupeWings from '@/assets/menu/coupe-wings.jpg';
 import coupeFries from '@/assets/menu/coupe-fries.jpg';
 import coupeSteakFrites from '@/assets/menu/coupe-steak-frites.jpg';
+import coupeFishChips from '@/assets/menu/coupe-fish-chips.jpg';
 import halfSmokeOriginal from '@/assets/menu/half-smoke-original.jpg';
 import turkeyDog from '@/assets/menu/turkey-dog.jpg';
 import halfSmokeSpicy from '@/assets/menu/half-smoke-spicy.jpg';
@@ -1366,7 +1367,8 @@ export const restaurants: Restaurant[] = [
         name: 'Fish & Chips',
         price: 18.00,
         category: 'Entrees',
-        description: 'Beer battered whiting served with french fries, tartar sauce and malt vinegar'
+        description: 'Beer battered whiting served with french fries, tartar sauce and malt vinegar',
+        image: coupeFishChips
       },
       {
         id: 'coupe-mac-cheese',
