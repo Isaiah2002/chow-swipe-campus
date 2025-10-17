@@ -129,6 +129,14 @@ import chickfilaIcedreamCup from '@/assets/menu/chickfila-icedream-cup.jpg';
 import chickfilaIcedreamCone from '@/assets/menu/chickfila-icedream-cone.jpg';
 import chickfilaChocolateChunkCookie from '@/assets/menu/chickfila-chocolate-chunk-cookie.jpg';
 import chickfilaChocolateFudgeBrownie from '@/assets/menu/chickfila-chocolate-fudge-brownie.jpg';
+import chickfilaBarbequeSauce from '@/assets/menu/chickfila-barbeque-sauce.jpg';
+import chickfilaSignatureSauce from '@/assets/menu/chickfila-signature-sauce.jpg';
+import chickfilaGardenHerbRanch from '@/assets/menu/chickfila-garden-herb-ranch.jpg';
+import chickfilaHoneyMustard from '@/assets/menu/chickfila-honey-mustard.jpg';
+import chickfilaPolynesianSauce from '@/assets/menu/chickfila-polynesian-sauce.jpg';
+import chickfilaSrirachaSauce from '@/assets/menu/chickfila-sriracha-sauce.jpg';
+import chickfilaHoneyRoastedBBQ from '@/assets/menu/chickfila-honey-roasted-bbq.jpg';
+import chickfilaZestyBuffalo from '@/assets/menu/chickfila-zesty-buffalo.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1047,6 +1055,62 @@ export const restaurants: Restaurant[] = [
         category: 'Treats',
         image: chickfilaChocolateFudgeBrownie,
         description: 'Rich and fudgy chocolate brownie'
+      },
+      {
+        id: 'chickfila-barbeque-sauce',
+        name: 'Barbeque Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaBarbequeSauce,
+        description: 'Sweet and tangy BBQ dipping sauce'
+      },
+      {
+        id: 'chickfila-signature-sauce',
+        name: 'Chick-fil-A Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaSignatureSauce,
+        description: 'Our signature sauce - a must-try!'
+      },
+      {
+        id: 'chickfila-garden-herb-ranch',
+        name: 'Garden Herb Ranch Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaGardenHerbRanch,
+        description: 'Creamy ranch with garden herbs'
+      },
+      {
+        id: 'chickfila-honey-mustard',
+        name: 'Honey Mustard Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaHoneyMustard,
+        description: 'Sweet honey mustard blend'
+      },
+      {
+        id: 'chickfila-polynesian-sauce',
+        name: 'Polynesian Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaPolynesianSauce,
+        description: 'Sweet and bold sauce with Pacific flair'
+      },
+      {
+        id: 'chickfila-sriracha-sauce',
+        name: 'Sweet & Spicy Sriracha Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaSrirachaSauce,
+        description: 'Sweet heat with sriracha kick'
+      },
+      {
+        id: 'chickfila-honey-roasted-bbq',
+        name: 'Honey Roasted BBQ Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaHoneyRoastedBBQ,
+        description: 'Sweet honey-roasted BBQ flavor'
+      },
+      {
+        id: 'chickfila-zesty-buffalo',
+        name: 'Zesty Buffalo Sauce',
+        category: 'Dipping Sauces',
+        image: chickfilaZestyBuffalo,
+        description: 'Zesty buffalo sauce with a kick'
       }
     ]
   },
