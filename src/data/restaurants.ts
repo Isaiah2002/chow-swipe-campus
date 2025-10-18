@@ -185,6 +185,13 @@ import bambaSpicyShroom from '@/assets/menu/bamba-spicy-shroom.jpg';
 import bambaFlautas from '@/assets/menu/bamba-flautas.jpg';
 import bambaElBachoNacho from '@/assets/menu/bamba-el-bacho-nacho.jpg';
 import bambaWings from '@/assets/menu/bamba-wings.jpg';
+// Heat Da Spot menu
+import heatBEC from '@/assets/menu/heat-bec.jpg';
+import heatBeefTibs from '@/assets/menu/heat-beef-tibs.jpg';
+import heatEthiopianCombo from '@/assets/menu/heat-ethiopian-combo.jpg';
+import heatFrenchToast from '@/assets/menu/heat-french-toast.jpg';
+import heatOmeletteWaffle from '@/assets/menu/heat-omelette-waffle.jpg';
+import heatBeyaynetu from '@/assets/menu/heat-beyaynetu.jpg';
 
 export const restaurants: Restaurant[] = [
   {
@@ -1430,7 +1437,57 @@ export const restaurants: Restaurant[] = [
     deals: 'Breakfast & Ethiopian specialties',
     estimatedTime: 15,
     latitude: 38.9315,
-    longitude: -77.0231
+    longitude: -77.0231,
+    menu: [
+      {
+        id: 'bec-bagel',
+        name: 'Bacon Egg and Cheese',
+        category: 'Breakfast',
+        image: heatBEC,
+        description: 'A fresh Everything Bagel with Bacon Egg and Cheese',
+        price: 8.50
+      },
+      {
+        id: 'beef-tibs',
+        name: 'Beef Tibs Ethiopian',
+        category: 'Ethiopian',
+        image: heatBeefTibs,
+        description: 'Grass fed beef cut in cubes with onion, peppers, tomato & special ingredients with injera, side of veggies or scrambled eggs',
+        price: 14.00
+      },
+      {
+        id: 'ethiopian-combo',
+        name: 'Ethiopian Combo Breakfast',
+        category: 'Ethiopian',
+        image: heatEthiopianCombo,
+        description: 'Includes kinche (Ethiopian oatmeal), firfir (injera firfir no meat) and scramble eggs. Vegan',
+        price: 12.00
+      },
+      {
+        id: 'french-toast-sandwich',
+        name: 'French Toast Sandwich',
+        category: 'Breakfast',
+        image: heatFrenchToast,
+        description: 'Egg, Cheese, Ham, Sausage or Bacon, on French Toast!',
+        price: 10.00
+      },
+      {
+        id: 'omelette-waffle',
+        name: 'Heat Special Omelette on Top of Waffle',
+        category: 'Breakfast',
+        image: heatOmeletteWaffle,
+        description: 'An Omelet made with eggs, cheese, onions, sausage and bacon on top of waffle!',
+        price: 11.50
+      },
+      {
+        id: 'beyaynetu',
+        name: 'Beyaynetu Vegetarian & Vegan Ethiopian Dish',
+        category: 'Ethiopian',
+        image: heatBeyaynetu,
+        description: 'Spinach, cabbage, red lentil curry, lentil comes with injera',
+        price: 13.00
+      }
+    ]
   },
   {
     id: '10',
