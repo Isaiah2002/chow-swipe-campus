@@ -1536,7 +1536,7 @@ export const restaurants: Restaurant[] = [
       },
       {
         id: 'beyaynetu',
-        name: 'Beyaynetu Vegetarian & Vegan Ethiopian Platter',
+        name: '- BeyEyentu Vegi Ethio Platter',
         category: 'Ethiopian',
         image: heatBeyaynetu,
         description: 'Spinach, cabbage, red lentil curry, chickpeas & injera',
