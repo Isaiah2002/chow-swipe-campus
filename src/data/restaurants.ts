@@ -1529,10 +1529,9 @@ export const restaurants: Restaurant[] = [
       },
       {
         id: 'ethiopian-combo',
-        name: 'Ethiopian Combo Breakfast',
+        name: '-Chechbsa X Firfir X Eggs Combo',
         category: 'Ethiopian',
-        image: heatEthiopianCombo,
-        description: 'Includes kinche (Ethiopian oatmeal), firfir (injera firfir no meat) and scramble eggs. Vegan',
+        description: 'Traditional Ethiopian breakfast combo with chechbsa, firfir, and scrambled eggs',
         price: 25.99
       },
       {
