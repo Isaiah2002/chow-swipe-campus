@@ -1528,14 +1528,6 @@ export const restaurants: Restaurant[] = [
         price: 7.99
       },
       {
-        id: 'beef-tibs',
-        name: 'Beef Tibs Ethiopian',
-        category: 'Ethiopian',
-        image: heatBeefTibs,
-        description: 'Grass fed beef cut in cubes with onion, peppers, tomato & special ingredients with injera, side of veggies or scrambled eggs',
-        price: 14.00
-      },
-      {
         id: 'ethiopian-combo',
         name: 'Ethiopian Combo Breakfast',
         category: 'Ethiopian',
