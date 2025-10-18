@@ -1419,7 +1419,7 @@ export const restaurants: Restaurant[] = [
   },
   {
     id: '9',
-    name: 'U Street Market',
+    name: 'Heat Da Spot',
     cuisine: 'International',
     price: '$',
     rating: 4.2,
