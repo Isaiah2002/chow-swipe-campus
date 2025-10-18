@@ -1420,17 +1420,17 @@ export const restaurants: Restaurant[] = [
   {
     id: '9',
     name: 'Heat Da Spot',
-    cuisine: 'International',
+    cuisine: 'Café',
     price: '$',
-    rating: 4.2,
+    rating: 4.5,
     distance: 0.8,
     image: indianImage,
-    description: 'Food hall with diverse vendors. Ethiopian, Caribbean, Mediterranean - something for everyone!',
-    dietary: ['Vegetarian', 'Vegan', 'Halal', 'Kosher'],
-    deals: 'Mix and match vendors',
+    description: 'Cozy café offering breakfast, sandwiches, and delicious American & Ethiopian meals. Perfect spot for a relaxed meal!',
+    dietary: ['Vegetarian', 'Vegan'],
+    deals: 'Breakfast & Ethiopian specialties',
     estimatedTime: 15,
-    latitude: 38.9165,
-    longitude: -77.0290
+    latitude: 38.9315,
+    longitude: -77.0231
   },
   {
     id: '10',
