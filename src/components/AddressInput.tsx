@@ -22,7 +22,11 @@ interface AddressData {
   zip_code: string;
 }
 
-export const AddressInput = () => {
+interface AddressInputProps {
+  onAddressUpdate?: () => void;
+}
+
+export const AddressInput = ({ onAddressUpdate }: AddressInputProps) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [currentAddress, setCurrentAddress] = useState<AddressData | null>(null);
@@ -111,6 +115,11 @@ export const AddressInput = () => {
       setCurrentAddress(formData);
       setOpen(false);
       toast.success('Delivery address saved!');
+      
+      // Trigger location update in parent
+      if (onAddressUpdate) {
+        onAddressUpdate();
+      }
     } catch (error: any) {
       console.error('Error saving address:', error);
       toast.error('Failed to save address');

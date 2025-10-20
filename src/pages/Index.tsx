@@ -21,7 +21,8 @@ import { supabase } from '@/integrations/supabase/client';
 const Index = () => {
   const navigate = useNavigate();
   const { user, loading, signOut } = useAuth();
-  const { location, error: locationError, loading: locationLoading, permissionStatus, requestLocation } = useLocation();
+  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [locationLoading, setLocationLoading] = useState(false);
 
   // Redirect to auth if not logged in
   useEffect(() => {
@@ -29,6 +30,50 @@ const Index = () => {
       navigate('/auth');
     }
   }, [user, loading, navigate]);
+
+  // Fetch and geocode delivery address
+  useEffect(() => {
+    const fetchAndGeocodeAddress = async () => {
+      if (!user) return;
+      
+      setLocationLoading(true);
+      try {
+        const { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('address, city, state, zip_code')
+          .eq('user_id', user.id)
+          .single();
+
+        if (profileError) throw profileError;
+
+        if (profile?.address && profile?.city && profile?.state && profile?.zip_code) {
+          const { data: geocodeData, error: geocodeError } = await supabase.functions.invoke('geocode-address', {
+            body: {
+              address: profile.address,
+              city: profile.city,
+              state: profile.state,
+              zip_code: profile.zip_code
+            }
+          });
+
+          if (geocodeError) throw geocodeError;
+
+          if (geocodeData?.latitude && geocodeData?.longitude) {
+            setLocation({
+              latitude: geocodeData.latitude,
+              longitude: geocodeData.longitude
+            });
+          }
+        }
+      } catch (error: any) {
+        console.error('Error geocoding address:', error);
+      } finally {
+        setLocationLoading(false);
+      }
+    };
+
+    fetchAndGeocodeAddress();
+  }, [user]);
   const [currentRestaurants, setCurrentRestaurants] = useState<Restaurant[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedRestaurants, setLikedRestaurants] = useState<Restaurant[]>([]);
@@ -190,9 +235,45 @@ const Index = () => {
     setShareDialogOpen(true);
   };
 
-  const handleLocationRequest = () => {
-    requestLocation();
-    setShowLocationPrompt(false);
+  const handleAddressUpdate = async () => {
+    if (!user) return;
+    
+    setLocationLoading(true);
+    try {
+      const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('address, city, state, zip_code')
+        .eq('user_id', user.id)
+        .single();
+
+      if (profileError) throw profileError;
+
+      if (profile?.address && profile?.city && profile?.state && profile?.zip_code) {
+        const { data: geocodeData, error: geocodeError } = await supabase.functions.invoke('geocode-address', {
+          body: {
+            address: profile.address,
+            city: profile.city,
+            state: profile.state,
+            zip_code: profile.zip_code
+          }
+        });
+
+        if (geocodeError) throw geocodeError;
+
+        if (geocodeData?.latitude && geocodeData?.longitude) {
+          setLocation({
+            latitude: geocodeData.latitude,
+            longitude: geocodeData.longitude
+          });
+          toast.success('Location updated based on delivery address!');
+        }
+      }
+    } catch (error: any) {
+      console.error('Error geocoding address:', error);
+      toast.error('Failed to update location from address');
+    } finally {
+      setLocationLoading(false);
+    }
   };
 
   const currentRestaurant = currentRestaurants[currentIndex];
@@ -232,26 +313,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20">
-      {/* Location Prompt Modal */}
-      {showLocationPrompt && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="w-full max-w-sm">
-            <LocationPrompt 
-              onRequestLocation={handleLocationRequest}
-              error={locationError?.message}
-              loading={locationLoading}
-            />
-            <Button
-              variant="ghost"
-              onClick={() => setShowLocationPrompt(false)}
-              className="w-full mt-2 text-muted-foreground"
-            >
-              Maybe later
-            </Button>
-          </div>
-        </div>
-      )}
-
       {/* Header */}
       <div className="p-4 pb-2">
         <div className="max-w-md mx-auto space-y-4">
@@ -272,17 +333,6 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-2">
-            {!location && permissionStatus !== 'denied' && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setShowLocationPrompt(true)}
-                className="text-muted-foreground hover:text-foreground relative"
-              >
-                <MapPin className="w-4 h-4" />
-                <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-pulse" />
-              </Button>
-            )}
               <Button
                 variant="ghost"
                 size="sm"
@@ -297,7 +347,7 @@ const Index = () => {
           <FilterBar filters={filters} onFiltersChange={setFilters} />
           
           {/* Delivery Address */}
-          <AddressInput />
+          <AddressInput onAddressUpdate={handleAddressUpdate} />
           
           {/* Search Bar */}
           <div className="relative">
