@@ -20,6 +20,7 @@ import nuveganCollardGreens from '@/assets/menu/nuvegan-collard-greens.png';
 import nuveganCurryCabbage from '@/assets/menu/nuvegan-curry-cabbage.png';
 import nuveganRedWineKale from '@/assets/menu/nuvegan-red-wine-kale.png';
 import nuveganChickenSalad from '@/assets/menu/nuvegan-chicken-salad.png';
+import nuveganCakes from '@/assets/menu/nuvegan-cakes.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -2046,7 +2047,7 @@ export const restaurants: Restaurant[] = [
         id: 'cakes',
         name: 'Cakes',
         category: 'Desserts',
-        image: saladImage,
+        image: nuveganCakes,
         description: 'Delicious vegan cakes',
         price: 6.49
       },
