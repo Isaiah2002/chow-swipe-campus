@@ -18,6 +18,7 @@ import nuveganMacCheese from '@/assets/menu/nuvegan-mac-cheese.png';
 import nuveganSweetPotatoes from '@/assets/menu/nuvegan-sweet-potatoes.png';
 import nuveganCollardGreens from '@/assets/menu/nuvegan-collard-greens.png';
 import nuveganCurryCabbage from '@/assets/menu/nuvegan-curry-cabbage.png';
+import nuveganRedWineKale from '@/assets/menu/nuvegan-red-wine-kale.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -2028,7 +2029,7 @@ export const restaurants: Restaurant[] = [
         id: 'red-wine-kale',
         name: 'Red Wine Kale',
         category: 'Cold Sides',
-        image: saladImage,
+        image: nuveganRedWineKale,
         description: 'Sautéed kale with red wine seasoning',
         price: 5.00
       },
