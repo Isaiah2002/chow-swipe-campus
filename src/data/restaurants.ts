@@ -6,6 +6,13 @@ import saladImage from '@/assets/salad.jpg';
 import dinerImage from '@/assets/diner.jpg';
 import indianImage from '@/assets/indian.jpg';
 import pxTacosImage from '@/assets/px-tacos.jpg';
+import pxElPastorTaco from '@/assets/menu/px-el-pastor-taco.jpg';
+import pxPotatoBravas from '@/assets/menu/px-potato-bravas.jpg';
+import pxBirriaQuesadilla from '@/assets/menu/px-birria-quesadilla.jpg';
+import pxBirriaTacos from '@/assets/menu/px-birria-tacos.jpg';
+import pxBirriaFries from '@/assets/menu/px-birria-fries.jpg';
+import pxTacoCombo from '@/assets/menu/px-taco-combo.jpg';
+import pxSirloinFries from '@/assets/menu/px-sirloin-fries.jpg';
 import nuveganDrummies from '@/assets/menu/nuvegan-drummies.png';
 import nuveganLasagna from '@/assets/menu/nuvegan-lasagna.png';
 import nuveganCrabCakes from '@/assets/menu/nuvegan-crab-cakes.png';
@@ -1219,7 +1226,58 @@ export const restaurants: Restaurant[] = [
     deals: 'Loyalty program available',
     estimatedTime: 20,
     latitude: 38.9302,
-    longitude: -77.0261
+    longitude: -77.0261,
+    menu: [
+      {
+        id: 'el-pastor-taco',
+        name: 'El Pastor Taco',
+        category: 'Tacos',
+        image: pxElPastorTaco,
+        description: 'Marinated pork with pineapple, onions, and cilantro'
+      },
+      {
+        id: 'birria-tacos',
+        name: '3 Birria Tacos with Consomé',
+        category: 'Tacos',
+        image: pxBirriaTacos,
+        description: 'Slow-cooked beef birria tacos with rich consomé for dipping'
+      },
+      {
+        id: 'birria-quesadilla',
+        name: 'Birria Quesadilla',
+        category: 'Quesadillas',
+        image: pxBirriaQuesadilla,
+        description: 'Melted cheese and tender birria beef in a crispy tortilla'
+      },
+      {
+        id: 'potato-bravas',
+        name: 'Potato Bravas',
+        category: 'Sides',
+        image: pxPotatoBravas,
+        description: 'Crispy potatoes with spicy brava sauce'
+      },
+      {
+        id: 'birria-fries',
+        name: 'Birria Fries',
+        category: 'Sides',
+        image: pxBirriaFries,
+        description: 'Loaded fries topped with birria beef and cheese'
+      },
+      {
+        id: 'sirloin-fiesta-fries',
+        name: 'Sirloin Fiesta Fries',
+        category: 'Sides',
+        image: pxSirloinFries,
+        description: 'Crispy fries topped with grilled sirloin and fiesta toppings'
+      },
+      {
+        id: 'taco-combo',
+        name: '6 Tacos + Rice and Beans',
+        category: 'Combos',
+        image: pxTacoCombo,
+        description: 'Six tacos of your choice with rice and beans or chips and salsa'
+      }
+    ]
   },
   {
     id: '5',
