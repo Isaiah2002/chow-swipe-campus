@@ -10,6 +10,7 @@ import nuveganLasagna from '@/assets/menu/nuvegan-lasagna.png';
 import nuveganCrabCakes from '@/assets/menu/nuvegan-crab-cakes.png';
 import nuveganGingerTofu from '@/assets/menu/nuvegan-ginger-tofu.png';
 import nuveganFriedSteak from '@/assets/menu/nuvegan-fried-steak.png';
+import nuveganBbqTofu from '@/assets/menu/nuvegan-bbq-tofu.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -1945,11 +1946,11 @@ export const restaurants: Restaurant[] = [
         price: 12.98
       },
       {
-        id: 'vegan-bbq-roast',
-        name: 'Vegan Barbecue Roast',
+        id: 'vegan-bbq-tofu',
+        name: 'Vegan BBQ Tofu',
         category: 'Entrees',
-        image: saladImage,
-        description: 'Tender BBQ roast served over fluffy rice',
+        image: nuveganBbqTofu,
+        description: 'Tender BBQ tofu served over fluffy rice',
         price: 12.98
       },
       {
