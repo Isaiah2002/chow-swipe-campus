@@ -14,6 +14,7 @@ import nuveganBbqTofu from '@/assets/menu/nuvegan-bbq-tofu.png';
 import nuveganFishFillet from '@/assets/menu/nuvegan-fish-fillet.png';
 import nuveganChickenSandwich from '@/assets/menu/nuvegan-chicken-sandwich.png';
 import nuveganSteakCheese from '@/assets/menu/nuvegan-steak-cheese.png';
+import nuveganMacCheese from '@/assets/menu/nuvegan-mac-cheese.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -1992,7 +1993,7 @@ export const restaurants: Restaurant[] = [
         id: 'mac-cheese',
         name: 'Mac and Cheese',
         category: 'Hot Sides',
-        image: saladImage,
+        image: nuveganMacCheese,
         description: 'Rich and creamy vegan mac and cheese - the BEST vegan mac n cheese ever!',
         price: 6.78
       },
