@@ -20,7 +20,7 @@ export const FilterBar = ({ filters, onFiltersChange }: FilterBarProps) => {
       {/* Filter Toggle Button */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold gradient-primary bg-clip-text text-transparent">
-          SwipEats 🍽️
+          SwipeN'Bite 🍽️
         </h1>
         <Button
           variant="outline"

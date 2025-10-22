@@ -102,11 +102,11 @@ const Auth = () => {
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-4xl font-bold gradient-primary bg-clip-text text-transparent">
-            SwipEats
+            SwipeN'Bite
           </h1>
           <p className="text-muted-foreground">
             {mode === 'login' && 'Welcome back! Sign in to continue swiping.'}
-            {mode === 'signup' && 'Join SwipEats and discover your next favorite meal!'}
+            {mode === 'signup' && 'Join SwipeN\'Bite and discover your next favorite meal!'}
             {mode === 'reset' && 'Enter your email to reset your password.'}
           </p>
         </div>
@@ -418,7 +418,7 @@ const Auth = () => {
 
         {/* Footer */}
         <div className="text-center text-xs text-muted-foreground">
-          By continuing, you agree to SwipEats' Terms of Service and Privacy Policy.
+          By continuing, you agree to SwipeN'Bite's Terms of Service and Privacy Policy.
         </div>
       </div>
     </div>

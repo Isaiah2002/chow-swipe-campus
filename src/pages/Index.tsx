@@ -286,7 +286,7 @@ const Index = () => {
         <div className="text-center space-y-4">
           <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto" />
           <p className="text-muted-foreground">
-            {fetchingRestaurants ? 'Finding restaurants near you...' : 'Loading SwipEats...'}
+            {fetchingRestaurants ? 'Finding restaurants near you...' : 'Loading SwipeN\'Bite...'}
           </p>
         </div>
       </div>
