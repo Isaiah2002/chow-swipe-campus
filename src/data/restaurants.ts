@@ -8,6 +8,7 @@ import indianImage from '@/assets/indian.jpg';
 import nuveganDrummies from '@/assets/menu/nuvegan-drummies.png';
 import nuveganLasagna from '@/assets/menu/nuvegan-lasagna.png';
 import nuveganCrabCakes from '@/assets/menu/nuvegan-crab-cakes.png';
+import nuveganGingerTofu from '@/assets/menu/nuvegan-ginger-tofu.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -1930,7 +1931,7 @@ export const restaurants: Restaurant[] = [
         id: 'ginger-tofu',
         name: 'Ginger Tofu',
         category: 'Entrees',
-        image: saladImage,
+        image: nuveganGingerTofu,
         description: 'Perfectly seasoned tofu with aromatic ginger spice blend over rice',
         price: 12.98
       },
