@@ -1954,14 +1954,6 @@ export const restaurants: Restaurant[] = [
         price: 12.98
       },
       {
-        id: 'bbq-tofu-rice',
-        name: 'Barbecue Tofu w. Rice',
-        category: 'Entrees',
-        image: saladImage,
-        description: 'BBQ glazed tofu served over rice',
-        price: 12.98
-      },
-      {
         id: 'vegan-fish-fillet',
         name: 'Vegan Fried Fish Fillet',
         category: 'Chef Specials',
