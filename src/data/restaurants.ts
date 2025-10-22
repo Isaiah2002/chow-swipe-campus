@@ -17,6 +17,7 @@ import nuveganSteakCheese from '@/assets/menu/nuvegan-steak-cheese.png';
 import nuveganMacCheese from '@/assets/menu/nuvegan-mac-cheese.png';
 import nuveganSweetPotatoes from '@/assets/menu/nuvegan-sweet-potatoes.png';
 import nuveganCollardGreens from '@/assets/menu/nuvegan-collard-greens.png';
+import nuveganCurryCabbage from '@/assets/menu/nuvegan-curry-cabbage.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -2011,7 +2012,7 @@ export const restaurants: Restaurant[] = [
         id: 'cabbage',
         name: 'Curry Cabbage',
         category: 'Hot Sides',
-        image: saladImage,
+        image: nuveganCurryCabbage,
         description: 'Seasoned cabbage - tastes like a down south home cooked meal',
         price: 5.00
       },
