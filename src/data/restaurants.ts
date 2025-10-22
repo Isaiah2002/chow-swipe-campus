@@ -1900,20 +1900,36 @@ export const restaurants: Restaurant[] = [
     longitude: -77.0228,
     menu: [
       {
-        id: 'vegan-drummies',
-        name: "Vegan Chick'n Drummies",
+        id: 'drummies',
+        name: 'Drummies',
         category: 'Entrees',
         image: saladImage,
-        description: 'Crispy plant-based drumsticks (gluten free option available)',
-        price: 13.50
+        description: 'Crispy vegan chicken drummies - crispy on the outside, tender on the inside',
+        price: 14.16
+      },
+      {
+        id: 'vegan-lasagna',
+        name: 'Vegan Lasagna',
+        category: 'Entrees',
+        image: saladImage,
+        description: 'Hearty and flavorful plant-based lasagna with layers of savory goodness',
+        price: 12.98
       },
       {
         id: 'vegan-crab-cakes',
         name: 'Vegan Crab Cakes',
         category: 'Entrees',
         image: saladImage,
-        description: 'Two flavorful plant-based crab cakes',
-        price: 12.50
+        description: 'Expertly seasoned plant-based crab cakes with authentic flavor',
+        price: 14.75
+      },
+      {
+        id: 'ginger-tofu',
+        name: 'Ginger Tofu',
+        category: 'Entrees',
+        image: saladImage,
+        description: 'Perfectly seasoned tofu with aromatic ginger spice blend over rice',
+        price: 12.98
       },
       {
         id: 'country-fried-steak',
@@ -1921,47 +1937,47 @@ export const restaurants: Restaurant[] = [
         category: 'Entrees',
         image: saladImage,
         description: 'Classic Southern-style fried steak, 100% plant-based',
-        price: 9.50
-      },
-      {
-        id: 'vegan-lasagna',
-        name: 'Vegan Lasagna',
-        category: 'Entrees',
-        image: saladImage,
-        description: 'Layered pasta with plant-based cheese and savory sauce',
-        price: 9.50
+        price: 12.98
       },
       {
         id: 'vegan-bbq-roast',
-        name: 'Vegan Barbecue Roast w. Rice',
+        name: 'Vegan Barbecue Roast',
         category: 'Entrees',
         image: saladImage,
-        description: 'Tender BBQ roast served over rice',
-        price: 9.50
-      },
-      {
-        id: 'ginger-spiced-tofu',
-        name: 'Ginger Spiced Tofu w. Rice',
-        category: 'Entrees',
-        image: saladImage,
-        description: 'Perfectly seasoned tofu with ginger spice blend over rice',
-        price: 9.50
-      },
-      {
-        id: 'vegan-fish-fillet',
-        name: 'Vegan Fried Fish Fillet',
-        category: 'Entrees',
-        image: saladImage,
-        description: 'Crispy breaded plant-based fish fillet',
-        price: 12.50
+        description: 'Tender BBQ roast served over fluffy rice',
+        price: 12.98
       },
       {
         id: 'bbq-tofu-rice',
         name: 'Barbecue Tofu w. Rice',
         category: 'Entrees',
         image: saladImage,
-        description: 'BBQ glazed tofu served over fluffy rice',
-        price: 9.50
+        description: 'BBQ glazed tofu served over rice',
+        price: 12.98
+      },
+      {
+        id: 'vegan-fish-fillet',
+        name: 'Vegan Fried Fish Fillet',
+        category: 'Chef Specials',
+        image: saladImage,
+        description: 'Crispy breaded plant-based fish fillet',
+        price: 12.98
+      },
+      {
+        id: 'vegan-chicken-sandwich',
+        name: 'Vegan Chicken Sandwich',
+        category: 'Sandwiches',
+        image: saladImage,
+        description: 'Amazing soft bun with a little sweetness, crispy vegan chicken - the best!',
+        price: 12.98
+      },
+      {
+        id: 'vegan-steak-cheese',
+        name: 'Vegan Steak and Cheese',
+        category: 'Sandwiches',
+        image: saladImage,
+        description: 'Plant-based steak with melted vegan cheese on a toasted roll',
+        price: 12.98
       },
       {
         id: 'entree-platter-1-side',
@@ -1980,9 +1996,41 @@ export const restaurants: Restaurant[] = [
         price: 17.00
       },
       {
+        id: 'mac-cheese',
+        name: 'Mac and Cheese',
+        category: 'Hot Sides',
+        image: saladImage,
+        description: 'Rich and creamy vegan mac and cheese - the BEST vegan mac n cheese ever!',
+        price: 6.78
+      },
+      {
+        id: 'sweet-potatoes',
+        name: 'Sweet Potatoes',
+        category: 'Hot Sides',
+        image: saladImage,
+        description: 'Sweet and perfectly seasoned sweet potatoes - FIRE!',
+        price: 5.50
+      },
+      {
+        id: 'cabbage',
+        name: 'Cabbage',
+        category: 'Hot Sides',
+        image: saladImage,
+        description: 'Seasoned cabbage - tastes like a down south home cooked meal',
+        price: 5.00
+      },
+      {
+        id: 'collard-greens',
+        name: 'Collard Greens',
+        category: 'Hot Sides',
+        image: saladImage,
+        description: 'Fresh, tasty greens with traditional Southern seasoning',
+        price: 5.00
+      },
+      {
         id: 'ginger-collards',
         name: 'Ginger Collards',
-        category: 'Sides',
+        category: 'Cold Sides',
         image: saladImage,
         description: 'Fresh collard greens with a ginger twist',
         price: 5.00
@@ -1990,7 +2038,7 @@ export const restaurants: Restaurant[] = [
       {
         id: 'red-wine-kale',
         name: 'Red Wine Kale',
-        category: 'Sides',
+        category: 'Cold Sides',
         image: saladImage,
         description: 'Sautéed kale with red wine seasoning',
         price: 5.00
@@ -1998,7 +2046,7 @@ export const restaurants: Restaurant[] = [
       {
         id: 'mushroom-medley',
         name: 'Mushroom Medley',
-        category: 'Sides',
+        category: 'Cold Sides',
         image: saladImage,
         description: 'Savory mix of seasoned mushrooms',
         price: 5.00
@@ -2006,7 +2054,7 @@ export const restaurants: Restaurant[] = [
       {
         id: 'floret-fusion',
         name: 'Floret Fusion',
-        category: 'Sides',
+        category: 'Cold Sides',
         image: saladImage,
         description: 'Mixed vegetable florets with special seasoning',
         price: 5.00
@@ -2014,7 +2062,7 @@ export const restaurants: Restaurant[] = [
       {
         id: 'herbed-quinoa',
         name: 'Herbed Quinoa',
-        category: 'Sides',
+        category: 'Cold Sides',
         image: saladImage,
         description: 'Fluffy quinoa with herbs and spices',
         price: 5.50
@@ -2022,18 +2070,26 @@ export const restaurants: Restaurant[] = [
       {
         id: 'chickn-salad',
         name: "Chick'n Salad",
-        category: 'Sides',
+        category: 'Cold Sides',
         image: saladImage,
         description: 'Creamy plant-based chicken salad',
         price: 6.00
       },
       {
-        id: 'curried-yuba',
-        name: 'Curried Yuba',
-        category: 'Sides',
+        id: 'cakes',
+        name: 'Cakes',
+        category: 'Desserts',
         image: saladImage,
-        description: 'Tofu skin with aromatic curry spices',
-        price: 5.00
+        description: 'Delicious vegan cakes',
+        price: 6.49
+      },
+      {
+        id: 'sweet-potato-pie',
+        name: 'Sweet Potato Pie',
+        category: 'Desserts',
+        image: saladImage,
+        description: 'Classic Southern dessert, 100% vegan',
+        price: 6.50
       }
     ]
   }
