@@ -290,7 +290,7 @@ export const SwipeCard = ({ restaurant, onSwipe, onFavorite, onShare, isFavorite
                 e.stopPropagation();
                 onShare(restaurant);
               }}
-              className="action-button bg-gradient-warm text-secondary-foreground group hover:scale-110"
+              className="action-button bg-secondary text-secondary-foreground group hover:scale-110"
             >
               <Share2 className="w-5 h-5" />
             </button>
