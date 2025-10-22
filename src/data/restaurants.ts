@@ -2034,14 +2034,6 @@ export const restaurants: Restaurant[] = [
         price: 5.00
       },
       {
-        id: 'mushroom-medley',
-        name: 'Mushroom Medley',
-        category: 'Cold Sides',
-        image: saladImage,
-        description: 'Savory mix of seasoned mushrooms',
-        price: 5.00
-      },
-      {
         id: 'floret-fusion',
         name: 'Floret Fusion',
         category: 'Cold Sides',
