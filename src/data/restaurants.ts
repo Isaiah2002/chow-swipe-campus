@@ -2034,22 +2034,6 @@ export const restaurants: Restaurant[] = [
         price: 5.00
       },
       {
-        id: 'floret-fusion',
-        name: 'Floret Fusion',
-        category: 'Cold Sides',
-        image: saladImage,
-        description: 'Mixed vegetable florets with special seasoning',
-        price: 5.00
-      },
-      {
-        id: 'herbed-quinoa',
-        name: 'Herbed Quinoa',
-        category: 'Cold Sides',
-        image: saladImage,
-        description: 'Fluffy quinoa with herbs and spices',
-        price: 5.50
-      },
-      {
         id: 'chickn-salad',
         name: "Chick'n Salad",
         category: 'Cold Sides',
