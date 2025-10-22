@@ -13,6 +13,7 @@ import nuveganFriedSteak from '@/assets/menu/nuvegan-fried-steak.png';
 import nuveganBbqTofu from '@/assets/menu/nuvegan-bbq-tofu.png';
 import nuveganFishFillet from '@/assets/menu/nuvegan-fish-fillet.png';
 import nuveganChickenSandwich from '@/assets/menu/nuvegan-chicken-sandwich.png';
+import nuveganSteakCheese from '@/assets/menu/nuvegan-steak-cheese.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -1975,7 +1976,7 @@ export const restaurants: Restaurant[] = [
         id: 'vegan-steak-cheese',
         name: 'Vegan Steak and Cheese',
         category: 'Sandwiches',
-        image: saladImage,
+        image: nuveganSteakCheese,
         description: 'Plant-based steak with melted vegan cheese on a toasted roll',
         price: 12.98
       },
