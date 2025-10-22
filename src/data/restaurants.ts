@@ -15,6 +15,7 @@ import nuveganFishFillet from '@/assets/menu/nuvegan-fish-fillet.png';
 import nuveganChickenSandwich from '@/assets/menu/nuvegan-chicken-sandwich.png';
 import nuveganSteakCheese from '@/assets/menu/nuvegan-steak-cheese.png';
 import nuveganMacCheese from '@/assets/menu/nuvegan-mac-cheese.png';
+import nuveganSweetPotatoes from '@/assets/menu/nuvegan-sweet-potatoes.png';
 // The Coupe menu - real photos from Toast Tab
 import coupeLatte from '@/assets/menu/coupe-latte.jpg';
 import coupeIcedLatte from '@/assets/menu/coupe-iced-latte.jpg';
@@ -2001,7 +2002,7 @@ export const restaurants: Restaurant[] = [
         id: 'sweet-potatoes',
         name: 'Sweet Potatoes',
         category: 'Hot Sides',
-        image: saladImage,
+        image: nuveganSweetPotatoes,
         description: 'Sweet and perfectly seasoned sweet potatoes - FIRE!',
         price: 5.50
       },
