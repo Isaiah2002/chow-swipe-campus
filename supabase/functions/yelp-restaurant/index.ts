@@ -46,7 +46,10 @@ serve(async (req) => {
     });
 
     if (!searchResponse.ok) {
-      throw new Error(`Yelp API error: ${searchResponse.status}`);
+      const errorBody = await searchResponse.text();
+      console.error('Yelp API error response:', errorBody);
+      console.error('Request URL:', searchUrl);
+      throw new Error(`Yelp API error: ${searchResponse.status} - ${errorBody}`);
     }
 
     const searchData = await searchResponse.json();
